@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documento de pedido de compra</title>
+    
+    <style>
+        table.border {
+            border-collapse: collapse;
+        }
+
+        table.border th {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        table.border td {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .header-text {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .description {
+            font-size: 16px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .business-info, .provider-info {
+            font-size: 14px;
+            text-align: left;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table border="0" style="width:100%">
+        <tr>
+            <td style="width:15%" valign="top"></td>
+            <td style="width:60%" valign="top">
+                <label class="header-text">Solicitud de compra de productos</label><br />
+                <div style="height:6px !important"></div>
+                <label class="description">LE PIDO QUE COMPRE POR FAVOR ESTOS PRODUCTOS.</label><br />
+                <label style="font-size:15px;">Este documento es válido de acuerdo con los términos y condiciones acordados.</label><br />
+            </td>
+        </tr>
+    </table>
+    <div style="height:15px !important"></div>
+    <hr />
+
+    <table border="0" style="width:100%">
+        <tr>
+            <td class="business-info" style="width: 50%; vertical-align: top;">
+                <table>
+                    <tr>
+                        <td>@nombrenegocio</td>
+                    </tr>
+                    <tr>
+                        <td>CUIT: @cuitnegocio</td>
+                    </tr>
+                    <tr>
+                        <td>DIRECCIÓN: @direcnegocio</td>
+                    </tr>
+                    <tr>
+                        <td>DOCUMENTO COMPRA: @docproveedor</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="provider-info" style="width: 50%; vertical-align: top;">
+                <table>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td>FECHA: @fecharegistro</td>
+                    </tr>
+                    <tr>
+                        <td>USUARIO REGISTRO: @usuarioregistro</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div style="height:15px !important"></div>
+    <table style="width:100%;font-size:12px;" class="border">
+        <thead>
+            <tr style="background-color: #e4e4e4c6">
+                <th>Producto</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @filas
+        </tbody>
+    </table>
+
+    <div style="height:15px !important"></div>
+    <table style="width:20%;font-size:12px;" class="border">
+        <thead>
+            <tr style="background-color: #e4e4e4c6">
+                <th></th> <!-- Agrega una columna de encabezado vacía -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td> <!-- Agrega una celda de datos vacía -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
