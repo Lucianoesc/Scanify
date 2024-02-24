@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidad;
 using BCrypt.Net;
+using CapaPresentacion.Modales;
 
 namespace CapaPresentacion
 {
@@ -242,5 +243,11 @@ namespace CapaPresentacion
             }
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FrmRecuperarContraseña frm = new FrmRecuperarContraseña();
+            frm.ShowDialog();
+
+        }
     }
 }

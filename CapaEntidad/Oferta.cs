@@ -16,5 +16,7 @@ namespace CapaEntidad
         public DateTime FechaFin { get; set; }
         public bool Estado { get; set; }
         public byte[] Foto { get; set; }
+        public byte[] PantallaPrincipal { get; set; }
+
     }
 }

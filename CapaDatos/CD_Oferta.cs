@@ -37,7 +37,8 @@ namespace CapaDatos
                                     FechaInicio = Convert.ToDateTime(dr["FechaInicio"].ToString()),
                                     FechaFin = Convert.ToDateTime(dr["FechaFin"].ToString()),
                                     Estado = Convert.ToBoolean(dr["Estado"]),
-                                    Foto = (byte[])dr["Foto"]
+                                    Foto = (byte[])dr["Foto"],
+                                    PantallaPrincipal = (byte[])dr["PantallaPrincipal"]
                                 });
                             }
                         }
@@ -53,7 +54,7 @@ namespace CapaDatos
         }
 
 
-        public int Registrar(Oferta obj, byte[] imagen, out string Mensaje)
+        public int Registrar(Oferta obj, byte[] imagen, byte[] pantallaprincipal, out string Mensaje)
         {
             int idOfertagenerado = 0;
             Mensaje = string.Empty;
@@ -68,6 +69,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("FechaInicio", obj.FechaInicio);
                     cmd.Parameters.AddWithValue("FechaFin", obj.FechaFin);
                     cmd.Parameters.AddWithValue("Foto", imagen);
+                    cmd.Parameters.AddWithValue("PantallaPrincipal", pantallaprincipal);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
                     cmd.Parameters.Add("IdGenerado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -156,11 +158,47 @@ namespace CapaDatos
 
             return respuesta;
         }
+        public byte[] ObtenerFotoPrincipal(int idOferta, out bool obtenido2)
+        {
+            obtenido2 = true;
+            byte[] FotoBytes = new byte[0];
+
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    conexion.Open();
+                    string query = "SP_ObtenerPantallaPrincipalOferta";
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@IdOferta", idOferta);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            FotoBytes = (byte[])dr["PantallaPrincipal"];
+
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                obtenido2 = false;
+                FotoBytes = new byte[0];
+
+            }
+
+            return FotoBytes;
+        }
 
         public byte[] ObtenerFoto(int idOferta, out bool obtenido)
         {
             obtenido = true;
             byte[] FotoBytes = new byte[0];
+
 
             try
             {
@@ -177,6 +215,7 @@ namespace CapaDatos
                         while (dr.Read())
                         {
                             FotoBytes = (byte[])dr["Foto"];
+
                         }
                     }
                 }
@@ -185,13 +224,14 @@ namespace CapaDatos
             {
                 obtenido = false;
                 FotoBytes = new byte[0];
+
             }
 
             return FotoBytes;
         }
 
 
-        public bool ActualizarFoto(int idOferta, byte[] imagen, out string mensaje)
+        public bool ActualizarFoto(int idOferta, byte[] imagen, byte[] pantallaprincipal, out string mensaje)
         {
             mensaje = string.Empty;
             bool respuesta = true;
@@ -205,6 +245,8 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand("SP_ActualizarFotoOferta", conexion);
                     cmd.Parameters.AddWithValue("@IdOferta", idOferta);
                     cmd.Parameters.AddWithValue("@Foto", imagen);
+                    cmd.Parameters.AddWithValue("@PantallaPrincipal", pantallaprincipal);
+
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;

@@ -36,6 +36,7 @@
             this.picAyuda = new System.Windows.Forms.PictureBox();
             this.picEmpleado = new System.Windows.Forms.PictureBox();
             this.picConsumidor = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAyuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmpleado)).BeginInit();
@@ -61,9 +62,9 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.LogoOriginalScanify;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 14);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1386, 118);
+            this.pictureBox2.Size = new System.Drawing.Size(1386, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -110,14 +111,23 @@
             this.picConsumidor.MouseEnter += new System.EventHandler(this.picConsumidor_MouseEnter);
             this.picConsumidor.MouseLeave += new System.EventHandler(this.picConsumidor_MouseLeave);
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1386, 14);
+            this.panel1.TabIndex = 4;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1386, 650);
-            this.Controls.Add(this.picConsumidor);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.picConsumidor);
             this.Controls.Add(this.picAyuda);
             this.Controls.Add(this.picEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -143,5 +153,6 @@
         private System.Windows.Forms.Timer timConsumidor;
         private System.Windows.Forms.Timer timEmpleados;
         private System.Windows.Forms.Timer timAyuda;
+        private System.Windows.Forms.Panel panel1;
     }
 }

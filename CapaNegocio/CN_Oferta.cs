@@ -17,7 +17,7 @@ namespace CapaNegocio
             return objcd_Oferta.ListarOfertas();
         }
 
-        public int Registrar(Oferta obj, byte[] imagen, out string Mensaje)
+        public int Registrar(Oferta obj, byte[] imagen, byte[] pantallaprincipal, out string Mensaje)
         {
             Mensaje = string.Empty;
             if (obj.NombreOferta == "")
@@ -39,14 +39,14 @@ namespace CapaNegocio
             }
             else
             {
-                return objcd_Oferta.Registrar(obj, imagen, out Mensaje);
+                return objcd_Oferta.Registrar(obj, imagen, pantallaprincipal, out Mensaje);
             }
 
 
 
         }
 
-        public bool Editar(Oferta obj, byte[] nuevaImagen, out string Mensaje)
+        public bool Editar(Oferta obj, byte[] nuevaImagen, byte[] pantallaprincipal, out string Mensaje)
         {
             Mensaje = string.Empty;
             if (obj.NombreOferta == "")
@@ -69,7 +69,7 @@ namespace CapaNegocio
             {
                 if (nuevaImagen != null)
                 {
-                    bool respuestaImagen = ActualizarFoto(obj.IdOferta, nuevaImagen, out Mensaje);
+                    bool respuestaImagen = ActualizarFoto(obj.IdOferta, nuevaImagen, pantallaprincipal, out Mensaje);
 
                     if (!respuestaImagen)
                     {
@@ -91,10 +91,13 @@ namespace CapaNegocio
         {
             return objcd_Oferta.ObtenerFoto(idOferta, out obtenido);
         }
-
-        public bool ActualizarFoto(int idOferta, byte[] imagen, out string mensaje)
+        public byte[] ObtenerFotoPrincipal(int idOferta, out bool obtenido2)
         {
-            return objcd_Oferta.ActualizarFoto(idOferta, imagen, out mensaje);
+            return objcd_Oferta.ObtenerFotoPrincipal(idOferta, out obtenido2);
+        }
+        public bool ActualizarFoto(int idOferta, byte[] imagen, byte[] pantallaprincipal, out string mensaje)
+        {
+            return objcd_Oferta.ActualizarFoto(idOferta, imagen, pantallaprincipal, out mensaje);
         }
 
         public List<Producto> ListarProductos_Oferta()

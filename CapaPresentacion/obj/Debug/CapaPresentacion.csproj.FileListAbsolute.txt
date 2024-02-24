@@ -266,3 +266,5 @@ C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\obj\Debug\CapaPres
 C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\bin\Debug\en-US\CapaPresentacion.resources.dll
 C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\obj\Debug\CapaPresentacion.Rec.en-US.resources
 C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\obj\Debug\en-US\CapaPresentacion.resources.dll
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resources
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.FrmRecuperarContraseña.resources

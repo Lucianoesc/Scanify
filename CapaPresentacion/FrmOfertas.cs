@@ -46,7 +46,7 @@ namespace CapaPresentacion
 
             foreach (Oferta item in lista)
             {
-                dgvData.Rows.Add(new object[] {"",item.IdOferta,item.NombreOferta,item.Descuento,item.FechaInicio,item.FechaFin,item.Foto,
+                dgvData.Rows.Add(new object[] {"",item.IdOferta,item.NombreOferta,item.Descuento,item.FechaInicio,item.FechaFin,item.Foto,item.PantallaPrincipal,
                 item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo",
                 });
@@ -66,6 +66,8 @@ namespace CapaPresentacion
             try
             {
                 byte[] byteimagen = null;
+                byte[] byteimagen2 = null;
+
                 string mensaje = string.Empty;
                 Oferta objoferta = new Oferta()
                 {
@@ -85,17 +87,25 @@ namespace CapaPresentacion
                         byteimagen = ms.ToArray();
                     }
                 }
+                if (picPantallaPrincipal.Image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        picPantallaPrincipal.Image.Save(ms, ImageFormat.Jpeg);
+                        byteimagen2 = ms.ToArray();
+                    }
+                }
 
                 CN_Oferta cnOferta = new CN_Oferta();
 
                 if (objoferta.IdOferta == 0)
                 {
-                    int idofertagenerado = cnOferta.Registrar(objoferta, byteimagen, out mensaje);
+                    int idofertagenerado = cnOferta.Registrar(objoferta, byteimagen, byteimagen2, out mensaje);
 
                     if (idofertagenerado != 0)
                     {
                         // Agregar la nueva fila a la DataGridView
-                        dgvData.Rows.Add(new object[] { "", idofertagenerado, txtNombreOferta.Text, descuento.ToString("0.00"), txtFechaInicio.Value.ToString(),txtFechaFin.Value.ToString(), byteimagen,
+                        dgvData.Rows.Add(new object[] { "", idofertagenerado, txtNombreOferta.Text, descuento.ToString("0.00"), txtFechaInicio.Value.ToString(),txtFechaFin.Value.ToString(), byteimagen, byteimagen2,
                         ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString(),
                         ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString()});
 
@@ -110,7 +120,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    bool resultado = cnOferta.Editar(objoferta, byteimagen, out mensaje);
+                    bool resultado = cnOferta.Editar(objoferta, byteimagen, byteimagen2, out mensaje);
 
                     if (resultado)
                     {
@@ -122,6 +132,7 @@ namespace CapaPresentacion
                         row.Cells["FechaInicio"].Value = txtFechaInicio.Value.ToString();
                         row.Cells["FechaFin"].Value = txtFechaFin.Value.ToString();
                         row.Cells["Foto"].Value = byteimagen;
+                        row.Cells["PantallaPrincipal"].Value = byteimagen2;
                         row.Cells["EstadoValor"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Valor.ToString();
                         row.Cells["Estado"].Value = ((OpcionCombo)cmbEstado.SelectedItem).Texto.ToString();
 
@@ -150,6 +161,8 @@ namespace CapaPresentacion
             txtFechaFin.Text = string.Empty;
             txtFechaInicio.Text = string.Empty;
             picFoto.Image = Properties.Resources.fotonodata;
+            picPantallaPrincipal.Image = Properties.Resources.fotonodata;
+
             cmbEstado.SelectedIndex = 0;
             txtNombreOferta.Focus();
         }
@@ -193,12 +206,24 @@ namespace CapaPresentacion
 
                         int idOferta = Convert.ToInt32(dgvData.Rows[indice].Cells["Id"].Value);
                         bool obtenido = true;
+
                         byte[] bytesImagen = new CN_Oferta().ObtenerFoto(idOferta, out obtenido);
+
+                        bool encontrado = true;
+
+                        byte[] bytesImagen2 = new CN_Oferta().ObtenerFotoPrincipal(idOferta, out encontrado);
+
 
                         if (obtenido)
                         {
                             Image imagen = ByteAimagen(bytesImagen);
                             picFoto.Image = imagen;
+
+                        }
+                        if (encontrado)
+                        {
+                            Image imagen2 = ByteAimagen2(bytesImagen2);
+                            picPantallaPrincipal.Image = imagen2;
 
                         }
                         foreach (OpcionCombo oc in cmbEstado.Items)
@@ -222,6 +247,15 @@ namespace CapaPresentacion
             Image imagen = new Bitmap(ms);
 
             return imagen;
+
+        }
+        public Image ByteAimagen2(byte[] imagenBytes2)
+        {
+            MemoryStream ms = new MemoryStream();
+            ms.Write(imagenBytes2, 0, imagenBytes2.Length);
+            Image imagen2 = new Bitmap(ms);
+
+            return imagen2;
 
         }
 
@@ -310,6 +344,34 @@ namespace CapaPresentacion
         {
             limpiar();
             picFoto.Image = Properties.Resources.fotonodata;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.ico;*.tif;*.tiff;*.emf;*.wmf;*.svg;*.exif;*.jfif;*.jpe;*.jif;*.webp;*.webp2;*.webp3";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Genera un nombre de archivo único basado en la fecha y la hora
+                    string fileName2 = "temp_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".jpg";
+
+                    // Carga la imagen WebP y la guarda con el nombre único
+                    using (MagickImage webpImage = new MagickImage(openFileDialog.FileName))
+                    {
+                        webpImage.Format = MagickFormat.Jpeg;
+                        webpImage.Write(fileName2);
+                    }
+
+                    picPantallaPrincipal.Image = Image.FromFile(fileName2);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al cargar la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

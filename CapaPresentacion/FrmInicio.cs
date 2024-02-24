@@ -131,7 +131,7 @@ namespace CapaPresentacion
         private void picConsumidor_DoubleClick(object sender, EventArgs e)
         {
             this.Hide();
-            FrmInicioClientes frm = new FrmInicioClientes();
+            FrmPrincipal frm = new FrmPrincipal();
             frm.Show();
         }
     }

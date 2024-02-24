@@ -258,6 +258,12 @@
     <Compile Include="FrmPedido.Designer.cs">
       <DependentUpon>FrmPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,12 @@
     </Compile>
     <Compile Include="FrmScanear.Designer.cs">
       <DependentUpon>FrmScanear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\FrmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\FrmRecuperarContraseña.Designer.cs">
+      <DependentUpon>FrmRecuperarContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Modales\Md_Producto.cs">
       <SubType>Form</SubType>
@@ -418,6 +430,9 @@
     <EmbeddedResource Include="FrmPedido.resx">
       <DependentUpon>FrmPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmScanear.resx">
       <DependentUpon>FrmScanear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\FrmRecuperarContraseña.resx">
+      <DependentUpon>FrmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\Md_Producto.resx">
       <DependentUpon>Md_Producto.cs</DependentUpon>
