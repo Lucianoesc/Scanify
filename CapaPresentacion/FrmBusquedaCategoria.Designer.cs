@@ -28,67 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBusquedaCategoria));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelCategorias = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowpanelProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtCategoria = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblSubCategoria2 = new System.Windows.Forms.Label();
+            this.lblSiguienteSubCat2 = new System.Windows.Forms.Label();
+            this.lblSubCategoria = new System.Windows.Forms.Label();
+            this.lblSiguienteSubCat = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblsiguienteproductos = new System.Windows.Forms.Label();
+            this.lblProductos = new System.Windows.Forms.Label();
+            this.flowpanelCategorias = new System.Windows.Forms.FlowLayoutPanel();
+            this.timerCarrucel = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flowpanelProductos
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 280);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1344, 499);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanelCategorias
-            // 
-            this.flowLayoutPanelCategorias.Location = new System.Drawing.Point(172, 147);
-            this.flowLayoutPanelCategorias.Name = "flowLayoutPanelCategorias";
-            this.flowLayoutPanelCategorias.Size = new System.Drawing.Size(1184, 93);
-            this.flowLayoutPanelCategorias.TabIndex = 1;
+            this.flowpanelProductos.AutoScroll = true;
+            this.flowpanelProductos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowpanelProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowpanelProductos.Location = new System.Drawing.Point(155, 70);
+            this.flowpanelProductos.Name = "flowpanelProductos";
+            this.flowpanelProductos.Size = new System.Drawing.Size(1231, 896);
+            this.flowpanelProductos.TabIndex = 0;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 49);
+            this.pictureBox3.Size = new System.Drawing.Size(86, 60);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // txtCategoria
+            // panel1
             // 
-            this.txtCategoria.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(125, 14);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(368, 36);
-            this.txtCategoria.TabIndex = 33;
-            this.txtCategoria.Text = "Busqueda de productos";
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1386, 10);
+            this.panel1.TabIndex = 36;
             // 
-            // label1
+            // panel2
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 27);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Categorías";
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 966);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1386, 60);
+            this.panel2.TabIndex = 37;
             // 
-            // label2
+            // panel4
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 26);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Productos";
+            this.panel4.Controls.Add(this.lblSubCategoria2);
+            this.panel4.Controls.Add(this.lblSiguienteSubCat2);
+            this.panel4.Controls.Add(this.lblSubCategoria);
+            this.panel4.Controls.Add(this.lblSiguienteSubCat);
+            this.panel4.Controls.Add(this.lblCategoria);
+            this.panel4.Controls.Add(this.lblsiguienteproductos);
+            this.panel4.Controls.Add(this.lblProductos);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1386, 60);
+            this.panel4.TabIndex = 39;
+            // 
+            // lblSubCategoria2
+            // 
+            this.lblSubCategoria2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSubCategoria2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria2.Location = new System.Drawing.Point(684, 0);
+            this.lblSubCategoria2.Name = "lblSubCategoria2";
+            this.lblSubCategoria2.Size = new System.Drawing.Size(182, 60);
+            this.lblSubCategoria2.TabIndex = 37;
+            this.lblSubCategoria2.Text = "SubCategoria2";
+            this.lblSubCategoria2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubCategoria2.Visible = false;
+            this.lblSubCategoria2.Click += new System.EventHandler(this.lblSubCategoria2_Click);
+            // 
+            // lblSiguienteSubCat2
+            // 
+            this.lblSiguienteSubCat2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSiguienteSubCat2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiguienteSubCat2.Location = new System.Drawing.Point(640, 0);
+            this.lblSiguienteSubCat2.Name = "lblSiguienteSubCat2";
+            this.lblSiguienteSubCat2.Size = new System.Drawing.Size(44, 60);
+            this.lblSiguienteSubCat2.TabIndex = 39;
+            this.lblSiguienteSubCat2.Text = ">";
+            this.lblSiguienteSubCat2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSiguienteSubCat2.Visible = false;
+            // 
+            // lblSubCategoria
+            // 
+            this.lblSubCategoria.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSubCategoria.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria.Location = new System.Drawing.Point(458, 0);
+            this.lblSubCategoria.Name = "lblSubCategoria";
+            this.lblSubCategoria.Size = new System.Drawing.Size(182, 60);
+            this.lblSubCategoria.TabIndex = 36;
+            this.lblSubCategoria.Text = "SubCategoria";
+            this.lblSubCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubCategoria.Visible = false;
+            this.lblSubCategoria.Click += new System.EventHandler(this.lblSubCategoria_Click);
+            // 
+            // lblSiguienteSubCat
+            // 
+            this.lblSiguienteSubCat.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSiguienteSubCat.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiguienteSubCat.Location = new System.Drawing.Point(414, 0);
+            this.lblSiguienteSubCat.Name = "lblSiguienteSubCat";
+            this.lblSiguienteSubCat.Size = new System.Drawing.Size(44, 60);
+            this.lblSiguienteSubCat.TabIndex = 38;
+            this.lblSiguienteSubCat.Text = ">";
+            this.lblSiguienteSubCat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSiguienteSubCat.Visible = false;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(226, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(188, 60);
+            this.lblCategoria.TabIndex = 35;
+            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCategoria.Visible = false;
+            this.lblCategoria.Click += new System.EventHandler(this.lblCategoria_Click);
+            // 
+            // lblsiguienteproductos
+            // 
+            this.lblsiguienteproductos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblsiguienteproductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsiguienteproductos.Location = new System.Drawing.Point(182, 0);
+            this.lblsiguienteproductos.Name = "lblsiguienteproductos";
+            this.lblsiguienteproductos.Size = new System.Drawing.Size(44, 60);
+            this.lblsiguienteproductos.TabIndex = 41;
+            this.lblsiguienteproductos.Text = ">";
+            this.lblsiguienteproductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblsiguienteproductos.Visible = false;
+            // 
+            // lblProductos
+            // 
+            this.lblProductos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblProductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductos.Location = new System.Drawing.Point(0, 0);
+            this.lblProductos.Name = "lblProductos";
+            this.lblProductos.Size = new System.Drawing.Size(182, 60);
+            this.lblProductos.TabIndex = 40;
+            this.lblProductos.Text = "Productos";
+            this.lblProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProductos.Click += new System.EventHandler(this.lblProductos_Click);
+            // 
+            // flowpanelCategorias
+            // 
+            this.flowpanelCategorias.AutoScroll = true;
+            this.flowpanelCategorias.BackColor = System.Drawing.Color.White;
+            this.flowpanelCategorias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowpanelCategorias.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowpanelCategorias.Location = new System.Drawing.Point(0, 70);
+            this.flowpanelCategorias.Name = "flowpanelCategorias";
+            this.flowpanelCategorias.Size = new System.Drawing.Size(155, 896);
+            this.flowpanelCategorias.TabIndex = 40;
+            this.flowpanelCategorias.Paint += new System.Windows.Forms.PaintEventHandler(this.flowpanelCategorias_Paint);
+            // 
+            // timerCarrucel
+            // 
+            this.timerCarrucel.Tick += new System.EventHandler(this.timerCarrucel_Tick);
             // 
             // FrmBusquedaCategoria
             // 
@@ -96,29 +213,38 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1386, 1026);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.flowLayoutPanelCategorias);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowpanelProductos);
+            this.Controls.Add(this.flowpanelCategorias);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBusquedaCategoria";
             this.Text = "FrmBusquedaCategoria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBusquedaCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCategorias;
+        private System.Windows.Forms.FlowLayoutPanel flowpanelProductos;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label txtCategoria;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FlowLayoutPanel flowpanelCategorias;
+        private System.Windows.Forms.Label lblSubCategoria2;
+        private System.Windows.Forms.Label lblSubCategoria;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblSiguienteSubCat2;
+        private System.Windows.Forms.Label lblSiguienteSubCat;
+        private System.Windows.Forms.Label lblsiguienteproductos;
+        private System.Windows.Forms.Label lblProductos;
+        private System.Windows.Forms.Timer timerCarrucel;
     }
 }

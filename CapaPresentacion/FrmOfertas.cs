@@ -18,13 +18,20 @@ namespace CapaPresentacion
 {
     public partial class FrmOfertas : Form
     {
-        public FrmOfertas()
+        private Usuario _Usuario;
+
+        public FrmOfertas(Usuario oUsuario = null)
         {
+            _Usuario = oUsuario;
+
             InitializeComponent();
         }
 
         private void FrmOfertas_Load(object sender, EventArgs e)
         {
+
+
+
             cmbEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cmbEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Inactivo" });
             cmbEstado.DisplayMember = "Texto";
@@ -371,6 +378,44 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show($"Error al cargar la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelOpciones.Visible= false;
+            PanelOfertas.Visible = true;
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            // Crea una instancia del formulario FrmInicioEmpleados
+            FrmInicioEmpleados frm = Application.OpenForms.OfType<FrmInicioEmpleados>().FirstOrDefault() ?? new FrmInicioEmpleados(_Usuario);
+
+            // Encuentra el panel llamado "DetallePedido" en el formulario FrmInicioEmpleados
+            Panel panelDetallePedido = frm.Controls.Find("Promocionar", true).FirstOrDefault() as Panel;
+
+            if (panelDetallePedido != null)
+            {
+
+
+                panelDetallePedido.Visible = true;
+                Button btn = frm.Controls.Find("btnOfertas_Productos", true).FirstOrDefault() as Button;
+
+                if (btn != null)
+                {
+                    Color colorOriginal = btn.ForeColor;
+                    Image imageOriginal = btn.Image;
+                    btn.ForeColor = Color.White;
+                    btn.Image = null;
+                    btn.PerformClick();
+                    panelDetallePedido.Visible = false;
+                    btn.ForeColor = colorOriginal;
+                    btn.Image = imageOriginal;
+                }
+
+
+
             }
         }
     }

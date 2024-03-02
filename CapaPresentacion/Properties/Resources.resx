@@ -121,14 +121,11 @@
   <data name="BtnAyuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnAyuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancelar.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelar.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GifLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GifLogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="borraruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borraruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="erroralert_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\erroralert.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,17 +133,23 @@
   <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="peligro_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\peligro.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mas (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SPedidos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPedidos.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="BtnConsumidores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnConsumidores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BtnLoginOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BtnLoginOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fotonodata" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fotonodata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boton_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton-eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eliminaralgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminaralgo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +157,14 @@
   <data name="informacion_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informacion.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="borraruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borraruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnLoginOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnLoginOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton_eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton-eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancelar.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonAgregarProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botonAgregarProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +175,8 @@
   <data name="BtnLoginOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnLoginOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GifLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GifLogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SCompras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SCompras.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -184,10 +187,10 @@
   <data name="correcto.png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\correcto.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="peligro_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\peligro.png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fotonodata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fotonodata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mas (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sin-imagen (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sin-imagen (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

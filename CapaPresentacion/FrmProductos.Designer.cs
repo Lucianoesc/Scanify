@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtBuscador = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.panelSuperior = new System.Windows.Forms.Panel();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.panel3.SuspendLayout();
+            this.txtBuscador = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.btnProducto = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.panelInferior = new System.Windows.Forms.Panel();
+            this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -45,16 +45,27 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1159, 833);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel3
+            // panelSuperior
             // 
-            this.panel3.Controls.Add(this.btnExcel);
-            this.panel3.Controls.Add(this.txtBuscador);
-            this.panel3.Controls.Add(this.materialFloatingActionButton1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1159, 100);
-            this.panel3.TabIndex = 2;
+            this.panelSuperior.Controls.Add(this.btnExcel);
+            this.panelSuperior.Controls.Add(this.txtBuscador);
+            this.panelSuperior.Controls.Add(this.btnProducto);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(1159, 100);
+            this.panelSuperior.TabIndex = 2;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(552, 27);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(98, 23);
+            this.btnExcel.TabIndex = 60;
+            this.btnExcel.Text = "Descargar Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Visible = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // txtBuscador
             // 
@@ -78,37 +89,27 @@
             this.txtBuscador.TabIndex = 0;
             this.txtBuscador.TextChanged += new System.EventHandler(this.siticoneTextBox1_TextChanged);
             // 
-            // panel4
+            // btnProducto
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 933);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1159, 108);
-            this.panel4.TabIndex = 2;
+            this.btnProducto.Depth = 0;
+            this.btnProducto.Icon = global::CapaPresentacion.Properties.Resources.mas__1_;
+            this.btnProducto.Location = new System.Drawing.Point(382, 42);
+            this.btnProducto.Mini = true;
+            this.btnProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(43, 45);
+            this.btnProducto.TabIndex = 0;
+            this.btnProducto.Text = "materialFloatingActionButton1";
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.materialFloatingActionButton1_Click);
             // 
-            // materialFloatingActionButton1
+            // panelInferior
             // 
-            this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = global::CapaPresentacion.Properties.Resources.mas__1_;
-            this.materialFloatingActionButton1.Location = new System.Drawing.Point(382, 42);
-            this.materialFloatingActionButton1.Mini = true;
-            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.Size = new System.Drawing.Size(43, 45);
-            this.materialFloatingActionButton1.TabIndex = 0;
-            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.UseVisualStyleBackColor = true;
-            this.materialFloatingActionButton1.Click += new System.EventHandler(this.materialFloatingActionButton1_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Location = new System.Drawing.Point(552, 27);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(98, 23);
-            this.btnExcel.TabIndex = 60;
-            this.btnExcel.Text = "Descargar Excel";
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInferior.Location = new System.Drawing.Point(0, 933);
+            this.panelInferior.Name = "panelInferior";
+            this.panelInferior.Size = new System.Drawing.Size(1159, 108);
+            this.panelInferior.TabIndex = 2;
             // 
             // FrmProductos
             // 
@@ -116,14 +117,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 1041);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelSuperior);
+            this.Controls.Add(this.panelInferior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
-            this.panel3.ResumeLayout(false);
+            this.panelSuperior.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -131,10 +132,10 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Panel panelInferior;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscador;
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
+        private MaterialSkin.Controls.MaterialFloatingActionButton btnProducto;
         private System.Windows.Forms.Button btnExcel;
     }
 }

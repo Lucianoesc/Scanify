@@ -38,7 +38,15 @@ namespace CapaDatos
                                     oCategoria = new Categoria()
                                     {
                                         IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
-                                        Descripcion = dr["DescripcionCategoria"].ToString()
+                                    },
+                                    oSubCategoria = new SubCategoria()
+                                    {
+                                        IdSubCategoria = Convert.ToInt32(dr["IdSubCategoria"]),
+
+                                    },
+                                    oSubCategoria2 = new SubCategoria2()
+                                    {
+                                        IdSubCategoria2 = Convert.ToInt32(dr["IdSubCategoria2"]),
                                     },
                                     Stock = Convert.ToInt32(dr["Stock"]),
                                     PrecioCompra = Convert.ToDecimal(dr["PrecioCompra"]),
@@ -46,7 +54,8 @@ namespace CapaDatos
                                     Estado = Convert.ToBoolean(dr["Estado"]),
                                     InformacionNutricional = dr["informacionNutricional"].ToString(),
                                     Foto = (byte[])dr["Foto"],
-
+                                    StockMinimo = Convert.ToInt32(dr["StockMinimo"]),
+                                    StockLimite = Convert.ToInt32(dr["StockLimite"])
                                 });
                             }
                         }
@@ -60,7 +69,7 @@ namespace CapaDatos
 
             return Lista;
         }
-
+        
         public int Registrar(Producto obj, byte[] imagen, out string Mensaje)
         {
             int idProductogenerado = 0;
@@ -71,21 +80,28 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
                     SqlCommand cmd = new SqlCommand("SP_RegistrarProducto".ToString(), oconexion);
-                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
-                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
-                    cmd.Parameters.AddWithValue("Codigo", obj.Codigo);
-                    cmd.Parameters.AddWithValue("IdCategoria", obj.oCategoria.IdCategoria);
-                    cmd.Parameters.AddWithValue("informacionNutricional", obj.InformacionNutricional);
-                    cmd.Parameters.AddWithValue("Foto", imagen);
-                    cmd.Parameters.AddWithValue("Estado", obj.Estado);
-                    cmd.Parameters.Add("IdGenerado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@Codigo", obj.Codigo);
+                    cmd.Parameters.AddWithValue("@Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("@IdCategoria", obj.oCategoria.IdCategoria);
+                    cmd.Parameters.AddWithValue("@IdSubCategoria", obj.oSubCategoria.IdSubCategoria);
+                    cmd.Parameters.AddWithValue("@IdSubCategoria2", obj.oSubCategoria2.IdSubCategoria2);
+                    cmd.Parameters.AddWithValue("@Stock", obj.Stock);
+                    cmd.Parameters.AddWithValue("@PrecioCompra", obj.PrecioCompra);
+                    cmd.Parameters.AddWithValue("@PrecioVenta", obj.PrecioVenta);
+                    cmd.Parameters.AddWithValue("@Estado", obj.Estado);
+                    cmd.Parameters.AddWithValue("@informacionNutricional", obj.InformacionNutricional);
+                    cmd.Parameters.AddWithValue("@Foto", imagen);
+                    cmd.Parameters.AddWithValue("@StockMinimo", obj.StockMinimo);
+                    cmd.Parameters.AddWithValue("@StockLimite", obj.StockLimite);
+                    cmd.Parameters.Add("@IdGenerado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("@Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
-                    idProductogenerado = Convert.ToInt32(cmd.Parameters["IdGenerado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+                    idProductogenerado = Convert.ToInt32(cmd.Parameters["@IdGenerado"].Value);
+                    Mensaje = cmd.Parameters["@Mensaje"].Value.ToString();
                 }
             }
             catch (Exception ex)
@@ -96,6 +112,7 @@ namespace CapaDatos
 
             return idProductogenerado;
         }
+        
         public bool Editar(Producto obj, out string Mensaje)
         {
             bool respuesta = false;
@@ -106,21 +123,29 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
                     SqlCommand cmd = new SqlCommand("SP_ModificarProducto".ToString(), oconexion);
-                    cmd.Parameters.AddWithValue("IdProducto", obj.IdProducto);
-                    cmd.Parameters.AddWithValue("Codigo", obj.Codigo);
-                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
-                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
-                    cmd.Parameters.AddWithValue("IdCategoria", obj.oCategoria.IdCategoria);
-                    cmd.Parameters.AddWithValue("Estado", obj.Estado);
-                    cmd.Parameters.AddWithValue("InformacionNutricional", obj.InformacionNutricional);
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@IdProducto", obj.IdProducto);
+                    cmd.Parameters.AddWithValue("@Codigo", obj.Codigo);
+                    cmd.Parameters.AddWithValue("@Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("@IdCategoria", obj.oCategoria.IdCategoria);
+                    cmd.Parameters.AddWithValue("@IdSubCategoria", obj.oSubCategoria.IdSubCategoria);
+                    cmd.Parameters.AddWithValue("@IdSubCategoria2", obj.oSubCategoria2.IdSubCategoria2);
+                    cmd.Parameters.AddWithValue("@Stock", obj.Stock);
+                    cmd.Parameters.AddWithValue("@PrecioCompra", obj.PrecioCompra);
+                    cmd.Parameters.AddWithValue("@PrecioVenta", obj.PrecioVenta);
+                    cmd.Parameters.AddWithValue("@Estado", obj.Estado);
+                    cmd.Parameters.AddWithValue("@informacionNutricional", obj.InformacionNutricional);
+                    cmd.Parameters.AddWithValue("@StockMinimo", obj.StockMinimo);
+                    cmd.Parameters.AddWithValue("@StockLimite", obj.StockLimite);
+
+                    cmd.Parameters.Add("@Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("@Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+                    respuesta = Convert.ToBoolean(cmd.Parameters["@Resultado"].Value);
+                    Mensaje = cmd.Parameters["@Mensaje"].Value.ToString();
                 }
             }
             catch (Exception ex)
@@ -131,6 +156,7 @@ namespace CapaDatos
 
             return respuesta;
         }
+
         public bool Eliminar(Producto obj, out string Mensaje)
         {
 
@@ -275,18 +301,18 @@ namespace CapaDatos
 
             return producto;
         }
-        public List<Producto> ObtenerProductosPorIdOferta(int idOferta)
+        public List<Producto> ListarProductosPorIdSubCategoria2(int idSubcategoria2)
         {
-            List<Producto> productos = new List<Producto>();
+            List<Producto> lista = new List<Producto>();
 
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("SP_ObtenerProductosPorIdOferta", conexion))
+                    using (SqlCommand cmd = new SqlCommand("SP_ListarProductosPorIdSubCategoria2", conexion))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@IdOferta", idOferta);
+                        cmd.Parameters.AddWithValue("@IdSubCategoria2", idSubcategoria2);
 
                         conexion.Open();
 
@@ -294,29 +320,32 @@ namespace CapaDatos
                         {
                             while (dr.Read())
                             {
-                                productos.Add(new Producto()
+                                lista.Add(new Producto()
                                 {
                                     IdProducto = Convert.ToInt32(dr["IdProducto"]),
+                                    Codigo = dr["Codigo"].ToString(),
                                     Nombre = dr["Nombre"].ToString(),
                                     Descripcion = dr["Descripcion"].ToString(),
-                                    Codigo = dr["Codigo"].ToString(),
+                                    oCategoria = new Categoria()
+                                    {
+                                        IdCategoria = Convert.ToInt32(dr["IdCategoria"])
+                                    },
+                                    oSubCategoria = new SubCategoria()
+                                    {
+                                        IdSubCategoria = Convert.ToInt32(dr["IdSubCategoria"])
+                                    },
+                                    oSubCategoria2 = new SubCategoria2()
+                                    {
+                                        IdSubCategoria2 = Convert.ToInt32(dr["IdSubCategoria2"])
+                                    },
                                     Stock = Convert.ToInt32(dr["Stock"]),
                                     PrecioCompra = Convert.ToDecimal(dr["PrecioCompra"]),
                                     PrecioVenta = Convert.ToDecimal(dr["PrecioVenta"]),
-                                    Foto = (byte[])dr["Foto"],
-                                    InformacionNutricional = dr["InformacionNutricional"].ToString(),
                                     Estado = Convert.ToBoolean(dr["Estado"]),
-                                    oCategoria = new Categoria
-                                    {
-                                        IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
-                                        Descripcion = dr["DescripcionCategoria"].ToString()
-                                    },
-                                    oOferta = new Oferta
-                                    {
-                                        IdOferta = idOferta,
-                                        NombreOferta = dr["NombreOferta"].ToString(),
-                                        Descuento = Convert.ToDecimal(dr["Descuento"])
-                                    }
+                                    InformacionNutricional = dr["InformacionNutricional"].ToString(),
+                                    Foto = (byte[])dr["Foto"],
+                                    StockMinimo = Convert.ToInt32(dr["StockMinimo"]),
+                                    StockLimite = Convert.ToInt32(dr["StockLimite"])
                                 });
                             }
                         }
@@ -324,12 +353,15 @@ namespace CapaDatos
                 }
                 catch (Exception)
                 {
-                    productos = new List<Producto>();
+                    lista = new List<Producto>();
                 }
             }
 
-            return productos;
+            return lista;
         }
+
+
+
 
     }
 }

@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBitacora));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelVista = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.IdBitacora = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +50,9 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelVista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.panel11.SuspendLayout();
@@ -59,26 +60,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.panelVista);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 624);
-            this.panel1.TabIndex = 1;
-            // 
             // panelVista
             // 
-            this.panelVista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panelVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.panelVista.Controls.Add(this.dgvData);
             this.panelVista.Controls.Add(this.panel11);
             this.panelVista.Controls.Add(this.panel12);
-            this.panelVista.Location = new System.Drawing.Point(12, 3);
+            this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVista.Location = new System.Drawing.Point(22, 0);
             this.panelVista.Name = "panelVista";
-            this.panelVista.Size = new System.Drawing.Size(1002, 586);
+            this.panelVista.Size = new System.Drawing.Size(999, 604);
             this.panelVista.TabIndex = 1;
             // 
             // dgvData
@@ -114,7 +105,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvData.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowTemplate.Height = 28;
-            this.dgvData.Size = new System.Drawing.Size(1002, 497);
+            this.dgvData.Size = new System.Drawing.Size(999, 515);
             this.dgvData.TabIndex = 0;
             // 
             // IdBitacora
@@ -176,7 +167,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 39);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1002, 50);
+            this.panel11.Size = new System.Drawing.Size(999, 50);
             this.panel11.TabIndex = 54;
             // 
             // btnLimpiarBuscador
@@ -187,7 +178,7 @@
             this.btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarBuscador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarBuscador.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarBuscador.Image")));
-            this.btnLimpiarBuscador.Location = new System.Drawing.Point(695, 4);
+            this.btnLimpiarBuscador.Location = new System.Drawing.Point(693, 4);
             this.btnLimpiarBuscador.Name = "btnLimpiarBuscador";
             this.btnLimpiarBuscador.Size = new System.Drawing.Size(50, 44);
             this.btnLimpiarBuscador.TabIndex = 53;
@@ -200,7 +191,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(216, 14);
+            this.label12.Location = new System.Drawing.Point(214, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 21);
             this.label12.TabIndex = 49;
@@ -214,7 +205,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(639, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(637, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(50, 44);
             this.btnBuscar.TabIndex = 52;
@@ -227,7 +218,7 @@
             this.cmbBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBusqueda.FormattingEnabled = true;
-            this.cmbBusqueda.Location = new System.Drawing.Point(316, 11);
+            this.cmbBusqueda.Location = new System.Drawing.Point(314, 11);
             this.cmbBusqueda.Name = "cmbBusqueda";
             this.cmbBusqueda.Size = new System.Drawing.Size(156, 29);
             this.cmbBusqueda.TabIndex = 51;
@@ -237,7 +228,7 @@
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(477, 12);
+            this.txtBuscar.Location = new System.Drawing.Point(475, 12);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(156, 27);
             this.txtBuscar.TabIndex = 50;
@@ -249,7 +240,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1002, 39);
+            this.panel12.Size = new System.Drawing.Size(999, 39);
             this.panel12.TabIndex = 55;
             // 
             // btnAtras
@@ -270,22 +261,48 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1002, 37);
+            this.label8.Size = new System.Drawing.Size(999, 37);
             this.label8.TabIndex = 33;
             this.label8.Text = "Bitacora";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(22, 624);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(22, 604);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1020, 20);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1021, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(21, 604);
+            this.panel3.TabIndex = 4;
             // 
             // FrmBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 624);
+            this.Controls.Add(this.panelVista);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBitacora";
             this.Text = "FrmBitacora";
             this.Load += new System.EventHandler(this.FrmBitacora_Load);
-            this.panel1.ResumeLayout(false);
             this.panelVista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.panel11.ResumeLayout(false);
@@ -297,8 +314,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelVista;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Panel panel11;
@@ -318,5 +333,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Detalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Origen;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

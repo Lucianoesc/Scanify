@@ -19,11 +19,14 @@ namespace CapaPresentacion
 
         private CN_PedidoStock cnPedidoStock = new CN_PedidoStock();
         private Form FormActivo = null;
+        private static Usuario usuarioActual;
 
         bool menulateralExpandido;
-        public FrmInicioEmpleados()
+        public FrmInicioEmpleados(Usuario objUsuario)
         {
             InitializeComponent();
+            usuarioActual = objUsuario;
+
         }
         private void abrirFormHijo(Form formHijo)
         {
@@ -50,7 +53,23 @@ namespace CapaPresentacion
             List<Usuario> listaUsuarios = new CN_Usuario().Listar();
             List<Proveedor> listaProveedores = new CN_Proveedor().Listar();
             List<Categoria> listaCategorias = new CN_Categoria().Listar();
+            List<Permiso> listaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
+            foreach (Panel panel in menulateral.Controls.OfType<Panel>())
+            {
+                // Verifica si el nombre del panel es igual a "PanelMenu" sin importar mayúsculas o minúsculas
+                if (string.Equals(panel.Name, "PanelMenu", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Si el nombre del panel es "PanelMenu", no cambies su visibilidad
+                    continue;
+                }
 
+                bool encontrado = listaPermisos.Any(m => m.NombreMenu == panel.Name);
+
+                if (encontrado == false)
+                {
+                    panel.Visible = false;
+                }
+            }
 
             lblOfertas.Text = listaOfertas.Count.ToString();
             lblcantprod.Text = listaProductos.Count.ToString();
@@ -190,6 +209,92 @@ namespace CapaPresentacion
                 MessageBox.Show($"Error al obtener datos para el gráfico: {ex.Message}");
             }
 
+
+        }
+
+        private void FrmInicioEmpleados_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                e.Handled = true;
+                picCerrar_Click(sender, e);
+            }
+        }
+
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            ModalSalirDashboard mod = new ModalSalirDashboard();
+            mod.PreviousForm = this; // Configurar la referencia al formulario anterior
+            mod.ShowDialog();
+        }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmCategoria());
+
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmProveedores());
+
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmRegistrarCompra());
+
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmPedido());
+
+        }
+
+        private void btnLegales_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmLegales());
+
+        }
+
+        private void btnPromociones_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmOfertas());
+
+        }
+
+        private void btnBitacora_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmBitacora());
+
+        }
+
+        private void btnDetallePedido_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmDetallePedido());
+
+        }
+
+        private void btnOfertas_Productos_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmOfertas_Productos());
+        }
+
+        private void btnDetalleCompra_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new FrmDetalleCompra());
 
         }
     }

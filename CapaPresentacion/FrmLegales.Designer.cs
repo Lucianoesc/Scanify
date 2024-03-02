@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLegales));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSubir = new System.Windows.Forms.Button();
             this.picFoto = new System.Windows.Forms.PictureBox();
@@ -49,8 +47,11 @@
             this.btnLimpiar = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodigoSeguridad = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel6.SuspendLayout();
@@ -58,32 +59,14 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1242, 788);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(92, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(983, 620);
-            this.panel2.TabIndex = 58;
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.btnSubir);
             this.panel3.Controls.Add(this.picFoto);
             this.panel3.Controls.Add(this.label3);
@@ -98,16 +81,17 @@
             this.panel3.Controls.Add(this.btnLimpiar);
             this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(161, 3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(633, 598);
+            this.panel3.Size = new System.Drawing.Size(1242, 788);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnSubir
             // 
             this.btnSubir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSubir.Location = new System.Drawing.Point(223, 354);
+            this.btnSubir.Location = new System.Drawing.Point(527, 429);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(144, 20);
             this.btnSubir.TabIndex = 72;
@@ -119,7 +103,7 @@
             // 
             this.picFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.picFoto.Image = global::CapaPresentacion.Properties.Resources.fotonodata;
-            this.picFoto.Location = new System.Drawing.Point(201, 239);
+            this.picFoto.Location = new System.Drawing.Point(505, 314);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(190, 115);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +115,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(220, 219);
+            this.label3.Location = new System.Drawing.Point(524, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 17);
             this.label3.TabIndex = 73;
@@ -162,7 +146,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(163, 165);
+            this.label4.Location = new System.Drawing.Point(468, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 64;
@@ -173,7 +157,7 @@
             this.lblrazonsocial.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblrazonsocial.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblrazonsocial.ForeColor = System.Drawing.Color.Black;
-            this.lblrazonsocial.Location = new System.Drawing.Point(165, 79);
+            this.lblrazonsocial.Location = new System.Drawing.Point(470, 79);
             this.lblrazonsocial.Name = "lblrazonsocial";
             this.lblrazonsocial.Size = new System.Drawing.Size(99, 18);
             this.lblrazonsocial.TabIndex = 62;
@@ -184,7 +168,7 @@
             this.lblcuil.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblcuil.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcuil.ForeColor = System.Drawing.Color.Black;
-            this.lblcuil.Location = new System.Drawing.Point(163, 123);
+            this.lblcuil.Location = new System.Drawing.Point(468, 123);
             this.lblcuil.Name = "lblcuil";
             this.lblcuil.Size = new System.Drawing.Size(93, 17);
             this.lblcuil.TabIndex = 63;
@@ -195,7 +179,7 @@
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.txtCuit);
-            this.panel6.Location = new System.Drawing.Point(166, 140);
+            this.panel6.Location = new System.Drawing.Point(471, 140);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(259, 24);
             this.panel6.TabIndex = 60;
@@ -216,7 +200,7 @@
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.txtDireccion);
-            this.panel8.Location = new System.Drawing.Point(166, 182);
+            this.panel8.Location = new System.Drawing.Point(471, 182);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(259, 27);
             this.panel8.TabIndex = 61;
@@ -237,7 +221,7 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.txtNombre);
-            this.panel5.Location = new System.Drawing.Point(166, 97);
+            this.panel5.Location = new System.Drawing.Point(471, 97);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(259, 24);
             this.panel5.TabIndex = 59;
@@ -257,7 +241,7 @@
             // 
             this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
-            this.btnLimpiar.Location = new System.Drawing.Point(298, 433);
+            this.btnLimpiar.Location = new System.Drawing.Point(599, 452);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(104, 53);
             this.btnLimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -269,7 +253,7 @@
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(190, 436);
+            this.btnGuardar.Location = new System.Drawing.Point(491, 455);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(106, 50);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,24 +266,72 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Green;
-            this.label6.Location = new System.Drawing.Point(244, 12);
+            this.label6.Location = new System.Drawing.Point(549, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 35);
             this.label6.TabIndex = 14;
             this.label6.Text = "LEGALES";
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(90, 788);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1042, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 788);
+            this.panel4.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(470, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(142, 17);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Codigo de seguridad";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtCodigoSeguridad);
+            this.panel1.Location = new System.Drawing.Point(473, 229);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(259, 27);
+            this.panel1.TabIndex = 74;
+            // 
+            // txtCodigoSeguridad
+            // 
+            this.txtCodigoSeguridad.BackColor = System.Drawing.Color.White;
+            this.txtCodigoSeguridad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoSeguridad.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoSeguridad.ForeColor = System.Drawing.Color.Black;
+            this.txtCodigoSeguridad.Location = new System.Drawing.Point(4, 5);
+            this.txtCodigoSeguridad.Name = "txtCodigoSeguridad";
+            this.txtCodigoSeguridad.Size = new System.Drawing.Size(250, 14);
+            this.txtCodigoSeguridad.TabIndex = 1;
             // 
             // FrmLegales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 788);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLegales";
             this.Text = "FrmLegales";
             this.Load += new System.EventHandler(this.FrmLegales_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
@@ -311,14 +343,13 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtIndice;
         private System.Windows.Forms.TextBox txtId;
@@ -337,5 +368,10 @@
         private System.Windows.Forms.Button btnSubir;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCodigoSeguridad;
     }
 }

@@ -47,18 +47,20 @@ namespace CapaPresentacion
         private void FrmLegales_Load(object sender, EventArgs e)
         {
             bool obtenido = true;
-            byte[] byteimagen = new CN_Legales().ObtenerFoto(out obtenido);
+            byte[] byteimagen = new CN_Negocio().ObtenerFoto(out obtenido);
 
             if (obtenido)
             {
                 picFoto.Image = ByteAImagen(byteimagen);
             }
 
-            Legales datos = new CN_Legales().ObtenerDatos();
+            Negocio datos = new CN_Negocio().ObtenerDatos();
 
             txtNombre.Text = datos.Nombre;
             txtCuit.Text = datos.CUIT;
             txtDireccion.Text = datos.Direccion;
+            txtCodigoSeguridad.Text = datos.CodigoSeguridad;
+
 
         }
 
@@ -93,7 +95,33 @@ namespace CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Negocio datos = new Negocio
+                {
+                    Nombre = txtNombre.Text,
+                    CUIT = txtCuit.Text,
+                    Direccion = txtDireccion.Text,
+                    CodigoSeguridad = txtCodigoSeguridad.Text
 
+                };
+
+                string mensaje;
+                bool respuesta = new CN_Negocio().Guardar(datos, out mensaje);
+
+                if (respuesta)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show($"Error al guardar los datos: {mensaje}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             try
             {
                 byte[] byteimagen = null;
@@ -109,7 +137,7 @@ namespace CapaPresentacion
                     }
                 }
 
-                bool respuesta = new CN_Legales().ActualizarFoto(byteimagen, out mensaje);
+                bool respuesta = new CN_Negocio().ActualizarFoto(byteimagen, out mensaje);
             }
             catch (Exception ex)
             {

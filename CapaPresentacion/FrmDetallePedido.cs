@@ -70,7 +70,7 @@ namespace CapaPresentacion
                 return;
             }
             string Texto_Html = Properties.Resources.SPedidos.ToString();
-            Legales odatos = new CN_Legales().ObtenerDatos();
+            Negocio odatos = new CN_Negocio().ObtenerDatos();
 
 
             Texto_Html = Texto_Html.Replace("@docproveedor", txtnumerodocumento.Text.ToString());
@@ -105,7 +105,7 @@ namespace CapaPresentacion
                     pdfDoc.Open();
 
                     bool obtenido = true;
-                    byte[] byteimagen = new CN_Legales().ObtenerFoto(out obtenido);
+                    byte[] byteimagen = new CN_Negocio().ObtenerFoto(out obtenido);
 
                     if (obtenido)
                     {

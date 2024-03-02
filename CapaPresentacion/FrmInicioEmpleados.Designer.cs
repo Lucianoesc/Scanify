@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicioEmpleados));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label24 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnActualizarGrafPedStock = new System.Windows.Forms.Button();
@@ -76,20 +76,43 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.menulateralTimer = new System.Windows.Forms.Timer(this.components);
             this.menulateral = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuBoton = new System.Windows.Forms.PictureBox();
-            this.panelHome = new System.Windows.Forms.Panel();
+            this.Home = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panelUsuarios = new System.Windows.Forms.Panel();
+            this.Usuario = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Consulta = new System.Windows.Forms.Panel();
             this.btnConsultas = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.Producto = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.Categoria = new System.Windows.Forms.Panel();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.Proveedores = new System.Windows.Forms.Panel();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.RegistrarCompra = new System.Windows.Forms.Panel();
+            this.btnCompras = new System.Windows.Forms.Button();
+            this.RegistrarPedido = new System.Windows.Forms.Panel();
+            this.btnPedidos = new System.Windows.Forms.Button();
+            this.Legales = new System.Windows.Forms.Panel();
+            this.btnLegales = new System.Windows.Forms.Button();
+            this.Promocion = new System.Windows.Forms.Panel();
+            this.btnPromociones = new System.Windows.Forms.Button();
+            this.Bitacora = new System.Windows.Forms.Panel();
+            this.btnBitacora = new System.Windows.Forms.Button();
+            this.DetallePedido = new System.Windows.Forms.Panel();
+            this.btnDetallePedido = new System.Windows.Forms.Button();
+            this.Promocionar = new System.Windows.Forms.Panel();
+            this.btnOfertas_Productos = new System.Windows.Forms.Button();
+            this.DetalleCompra = new System.Windows.Forms.Panel();
+            this.btnDetalleCompra = new System.Windows.Forms.Button();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPedidoStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -107,14 +130,28 @@
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.menulateral.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBoton)).BeginInit();
-            this.panelHome.SuspendLayout();
-            this.panelUsuarios.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.Home.SuspendLayout();
+            this.Usuario.SuspendLayout();
+            this.Consulta.SuspendLayout();
+            this.Producto.SuspendLayout();
+            this.Categoria.SuspendLayout();
+            this.Proveedores.SuspendLayout();
+            this.RegistrarCompra.SuspendLayout();
+            this.RegistrarPedido.SuspendLayout();
+            this.Legales.SuspendLayout();
+            this.Promocion.SuspendLayout();
+            this.Bitacora.SuspendLayout();
+            this.DetallePedido.SuspendLayout();
+            this.Promocionar.SuspendLayout();
+            this.DetalleCompra.SuspendLayout();
+            this.panelSuperior.SuspendLayout();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label24
@@ -168,17 +205,17 @@
             // 
             this.chartPedidoStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.chartPedidoStock.BorderlineColor = System.Drawing.Color.DarkGray;
-            chartArea1.Name = "ChartArea1";
-            this.chartPedidoStock.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartPedidoStock.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartPedidoStock.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartPedidoStock.Legends.Add(legend3);
             this.chartPedidoStock.Location = new System.Drawing.Point(25, 50);
             this.chartPedidoStock.Name = "chartPedidoStock";
             this.chartPedidoStock.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartPedidoStock.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartPedidoStock.Series.Add(series3);
             this.chartPedidoStock.Size = new System.Drawing.Size(454, 266);
             this.chartPedidoStock.TabIndex = 2;
             this.chartPedidoStock.Text = "chart1";
@@ -486,16 +523,16 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(36, 47);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(454, 274);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -578,11 +615,21 @@
             // menulateral
             // 
             this.menulateral.BackColor = System.Drawing.Color.White;
-            this.menulateral.Controls.Add(this.panel1);
-            this.menulateral.Controls.Add(this.panelHome);
-            this.menulateral.Controls.Add(this.panelUsuarios);
-            this.menulateral.Controls.Add(this.panel2);
-            this.menulateral.Controls.Add(this.panel11);
+            this.menulateral.Controls.Add(this.panelMenu);
+            this.menulateral.Controls.Add(this.Home);
+            this.menulateral.Controls.Add(this.Usuario);
+            this.menulateral.Controls.Add(this.Consulta);
+            this.menulateral.Controls.Add(this.Producto);
+            this.menulateral.Controls.Add(this.Categoria);
+            this.menulateral.Controls.Add(this.Proveedores);
+            this.menulateral.Controls.Add(this.RegistrarCompra);
+            this.menulateral.Controls.Add(this.RegistrarPedido);
+            this.menulateral.Controls.Add(this.Legales);
+            this.menulateral.Controls.Add(this.Promocion);
+            this.menulateral.Controls.Add(this.Bitacora);
+            this.menulateral.Controls.Add(this.DetallePedido);
+            this.menulateral.Controls.Add(this.Promocionar);
+            this.menulateral.Controls.Add(this.DetalleCompra);
             this.menulateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.menulateral.Location = new System.Drawing.Point(0, 0);
             this.menulateral.MaximumSize = new System.Drawing.Size(227, 1080);
@@ -591,16 +638,16 @@
             this.menulateral.Size = new System.Drawing.Size(227, 1080);
             this.menulateral.TabIndex = 10;
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.menuBoton);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 119);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.Controls.Add(this.pictureBox2);
+            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.label1);
+            this.panelMenu.Controls.Add(this.menuBoton);
+            this.panelMenu.Location = new System.Drawing.Point(3, 3);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(328, 119);
+            this.panelMenu.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -645,16 +692,16 @@
             this.menuBoton.TabStop = false;
             this.menuBoton.Click += new System.EventHandler(this.menuBoton_Click);
             // 
-            // panelHome
+            // Home
             // 
-            this.panelHome.BackColor = System.Drawing.SystemColors.Control;
-            this.panelHome.Controls.Add(this.btnHome);
-            this.panelHome.Location = new System.Drawing.Point(3, 128);
-            this.panelHome.MaximumSize = new System.Drawing.Size(322, 169);
-            this.panelHome.MinimumSize = new System.Drawing.Size(322, 56);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(322, 56);
-            this.panelHome.TabIndex = 9;
+            this.Home.BackColor = System.Drawing.SystemColors.Control;
+            this.Home.Controls.Add(this.btnHome);
+            this.Home.Location = new System.Drawing.Point(3, 128);
+            this.Home.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Home.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(322, 56);
+            this.Home.TabIndex = 9;
             // 
             // btnHome
             // 
@@ -676,16 +723,16 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panelUsuarios
+            // Usuario
             // 
-            this.panelUsuarios.BackColor = System.Drawing.SystemColors.Control;
-            this.panelUsuarios.Controls.Add(this.btnUsuarios);
-            this.panelUsuarios.Location = new System.Drawing.Point(3, 190);
-            this.panelUsuarios.MaximumSize = new System.Drawing.Size(322, 169);
-            this.panelUsuarios.MinimumSize = new System.Drawing.Size(322, 56);
-            this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(322, 56);
-            this.panelUsuarios.TabIndex = 8;
+            this.Usuario.BackColor = System.Drawing.SystemColors.Control;
+            this.Usuario.Controls.Add(this.btnUsuarios);
+            this.Usuario.Location = new System.Drawing.Point(3, 190);
+            this.Usuario.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Usuario.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(322, 56);
+            this.Usuario.TabIndex = 8;
             // 
             // btnUsuarios
             // 
@@ -707,16 +754,16 @@
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // panel2
+            // Consulta
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.btnConsultas);
-            this.panel2.Location = new System.Drawing.Point(3, 252);
-            this.panel2.MaximumSize = new System.Drawing.Size(322, 169);
-            this.panel2.MinimumSize = new System.Drawing.Size(322, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 56);
-            this.panel2.TabIndex = 9;
+            this.Consulta.BackColor = System.Drawing.SystemColors.Control;
+            this.Consulta.Controls.Add(this.btnConsultas);
+            this.Consulta.Location = new System.Drawing.Point(3, 252);
+            this.Consulta.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Consulta.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Consulta.Name = "Consulta";
+            this.Consulta.Size = new System.Drawing.Size(322, 56);
+            this.Consulta.TabIndex = 9;
             // 
             // btnConsultas
             // 
@@ -738,16 +785,16 @@
             this.btnConsultas.UseVisualStyleBackColor = false;
             this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
-            // panel11
+            // Producto
             // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Control;
-            this.panel11.Controls.Add(this.btnProductos);
-            this.panel11.Location = new System.Drawing.Point(3, 314);
-            this.panel11.MaximumSize = new System.Drawing.Size(322, 169);
-            this.panel11.MinimumSize = new System.Drawing.Size(322, 56);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(322, 56);
-            this.panel11.TabIndex = 10;
+            this.Producto.BackColor = System.Drawing.SystemColors.Control;
+            this.Producto.Controls.Add(this.btnProductos);
+            this.Producto.Location = new System.Drawing.Point(3, 314);
+            this.Producto.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Producto.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Producto.Name = "Producto";
+            this.Producto.Size = new System.Drawing.Size(322, 56);
+            this.Producto.TabIndex = 10;
             // 
             // btnProductos
             // 
@@ -769,13 +816,362 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
+            // Categoria
+            // 
+            this.Categoria.BackColor = System.Drawing.SystemColors.Control;
+            this.Categoria.Controls.Add(this.btnCategorias);
+            this.Categoria.Location = new System.Drawing.Point(3, 376);
+            this.Categoria.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Categoria.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Categoria.Name = "Categoria";
+            this.Categoria.Size = new System.Drawing.Size(322, 56);
+            this.Categoria.TabIndex = 11;
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.BackColor = System.Drawing.Color.White;
+            this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.Black;
+            this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
+            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 0);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(322, 56);
+            this.btnCategorias.TabIndex = 3;
+            this.btnCategorias.Text = "          Categorias";
+            this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // Proveedores
+            // 
+            this.Proveedores.BackColor = System.Drawing.SystemColors.Control;
+            this.Proveedores.Controls.Add(this.btnProveedores);
+            this.Proveedores.Location = new System.Drawing.Point(3, 438);
+            this.Proveedores.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Proveedores.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Proveedores.Name = "Proveedores";
+            this.Proveedores.Size = new System.Drawing.Size(322, 56);
+            this.Proveedores.TabIndex = 12;
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.BackColor = System.Drawing.Color.White;
+            this.btnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.Black;
+            this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(0, 0);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProveedores.Size = new System.Drawing.Size(322, 56);
+            this.btnProveedores.TabIndex = 3;
+            this.btnProveedores.Text = "          Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
+            // 
+            // RegistrarCompra
+            // 
+            this.RegistrarCompra.BackColor = System.Drawing.SystemColors.Control;
+            this.RegistrarCompra.Controls.Add(this.btnCompras);
+            this.RegistrarCompra.Location = new System.Drawing.Point(3, 500);
+            this.RegistrarCompra.MaximumSize = new System.Drawing.Size(322, 169);
+            this.RegistrarCompra.MinimumSize = new System.Drawing.Size(322, 56);
+            this.RegistrarCompra.Name = "RegistrarCompra";
+            this.RegistrarCompra.Size = new System.Drawing.Size(322, 56);
+            this.RegistrarCompra.TabIndex = 13;
+            // 
+            // btnCompras
+            // 
+            this.btnCompras.BackColor = System.Drawing.Color.White;
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.Black;
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 0);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCompras.Size = new System.Drawing.Size(322, 56);
+            this.btnCompras.TabIndex = 3;
+            this.btnCompras.Text = "          Compras";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.UseVisualStyleBackColor = false;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
+            // 
+            // RegistrarPedido
+            // 
+            this.RegistrarPedido.BackColor = System.Drawing.SystemColors.Control;
+            this.RegistrarPedido.Controls.Add(this.btnPedidos);
+            this.RegistrarPedido.Location = new System.Drawing.Point(3, 562);
+            this.RegistrarPedido.MaximumSize = new System.Drawing.Size(322, 169);
+            this.RegistrarPedido.MinimumSize = new System.Drawing.Size(322, 56);
+            this.RegistrarPedido.Name = "RegistrarPedido";
+            this.RegistrarPedido.Size = new System.Drawing.Size(322, 56);
+            this.RegistrarPedido.TabIndex = 13;
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.BackColor = System.Drawing.Color.White;
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.ForeColor = System.Drawing.Color.Black;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 0);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPedidos.Size = new System.Drawing.Size(322, 56);
+            this.btnPedidos.TabIndex = 3;
+            this.btnPedidos.Text = "          Pedidos";
+            this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
+            // Legales
+            // 
+            this.Legales.BackColor = System.Drawing.SystemColors.Control;
+            this.Legales.Controls.Add(this.btnLegales);
+            this.Legales.Location = new System.Drawing.Point(3, 624);
+            this.Legales.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Legales.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Legales.Name = "Legales";
+            this.Legales.Size = new System.Drawing.Size(322, 56);
+            this.Legales.TabIndex = 14;
+            // 
+            // btnLegales
+            // 
+            this.btnLegales.BackColor = System.Drawing.Color.White;
+            this.btnLegales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLegales.FlatAppearance.BorderSize = 0;
+            this.btnLegales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLegales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLegales.ForeColor = System.Drawing.Color.Black;
+            this.btnLegales.Image = ((System.Drawing.Image)(resources.GetObject("btnLegales.Image")));
+            this.btnLegales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLegales.Location = new System.Drawing.Point(0, 0);
+            this.btnLegales.Name = "btnLegales";
+            this.btnLegales.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnLegales.Size = new System.Drawing.Size(322, 56);
+            this.btnLegales.TabIndex = 3;
+            this.btnLegales.Text = "          Legales";
+            this.btnLegales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLegales.UseVisualStyleBackColor = false;
+            this.btnLegales.Click += new System.EventHandler(this.btnLegales_Click);
+            // 
+            // Promocion
+            // 
+            this.Promocion.BackColor = System.Drawing.SystemColors.Control;
+            this.Promocion.Controls.Add(this.btnPromociones);
+            this.Promocion.Location = new System.Drawing.Point(3, 686);
+            this.Promocion.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Promocion.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Promocion.Name = "Promocion";
+            this.Promocion.Size = new System.Drawing.Size(322, 56);
+            this.Promocion.TabIndex = 14;
+            // 
+            // btnPromociones
+            // 
+            this.btnPromociones.BackColor = System.Drawing.Color.White;
+            this.btnPromociones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPromociones.FlatAppearance.BorderSize = 0;
+            this.btnPromociones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromociones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromociones.ForeColor = System.Drawing.Color.Black;
+            this.btnPromociones.Image = ((System.Drawing.Image)(resources.GetObject("btnPromociones.Image")));
+            this.btnPromociones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromociones.Location = new System.Drawing.Point(0, 0);
+            this.btnPromociones.Name = "btnPromociones";
+            this.btnPromociones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPromociones.Size = new System.Drawing.Size(322, 56);
+            this.btnPromociones.TabIndex = 3;
+            this.btnPromociones.Text = "          Promociones";
+            this.btnPromociones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromociones.UseVisualStyleBackColor = false;
+            this.btnPromociones.Click += new System.EventHandler(this.btnPromociones_Click);
+            // 
+            // Bitacora
+            // 
+            this.Bitacora.BackColor = System.Drawing.SystemColors.Control;
+            this.Bitacora.Controls.Add(this.btnBitacora);
+            this.Bitacora.Location = new System.Drawing.Point(3, 748);
+            this.Bitacora.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Bitacora.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Bitacora.Name = "Bitacora";
+            this.Bitacora.Size = new System.Drawing.Size(322, 56);
+            this.Bitacora.TabIndex = 15;
+            // 
+            // btnBitacora
+            // 
+            this.btnBitacora.BackColor = System.Drawing.Color.White;
+            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBitacora.FlatAppearance.BorderSize = 0;
+            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBitacora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBitacora.ForeColor = System.Drawing.Color.Black;
+            this.btnBitacora.Image = ((System.Drawing.Image)(resources.GetObject("btnBitacora.Image")));
+            this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBitacora.Location = new System.Drawing.Point(0, 0);
+            this.btnBitacora.Name = "btnBitacora";
+            this.btnBitacora.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnBitacora.Size = new System.Drawing.Size(322, 56);
+            this.btnBitacora.TabIndex = 3;
+            this.btnBitacora.Text = "          Bitacora";
+            this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBitacora.UseVisualStyleBackColor = false;
+            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+            // 
+            // DetallePedido
+            // 
+            this.DetallePedido.BackColor = System.Drawing.SystemColors.Control;
+            this.DetallePedido.Controls.Add(this.btnDetallePedido);
+            this.DetallePedido.Location = new System.Drawing.Point(3, 810);
+            this.DetallePedido.MaximumSize = new System.Drawing.Size(322, 169);
+            this.DetallePedido.MinimumSize = new System.Drawing.Size(322, 56);
+            this.DetallePedido.Name = "DetallePedido";
+            this.DetallePedido.Size = new System.Drawing.Size(322, 56);
+            this.DetallePedido.TabIndex = 14;
+            this.DetallePedido.Visible = false;
+            // 
+            // btnDetallePedido
+            // 
+            this.btnDetallePedido.BackColor = System.Drawing.Color.White;
+            this.btnDetallePedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDetallePedido.FlatAppearance.BorderSize = 0;
+            this.btnDetallePedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetallePedido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetallePedido.ForeColor = System.Drawing.Color.Black;
+            this.btnDetallePedido.Image = ((System.Drawing.Image)(resources.GetObject("btnDetallePedido.Image")));
+            this.btnDetallePedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetallePedido.Location = new System.Drawing.Point(0, 0);
+            this.btnDetallePedido.Name = "btnDetallePedido";
+            this.btnDetallePedido.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDetallePedido.Size = new System.Drawing.Size(322, 56);
+            this.btnDetallePedido.TabIndex = 3;
+            this.btnDetallePedido.Text = "          DetallePedidos";
+            this.btnDetallePedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetallePedido.UseVisualStyleBackColor = false;
+            this.btnDetallePedido.Click += new System.EventHandler(this.btnDetallePedido_Click);
+            // 
+            // Promocionar
+            // 
+            this.Promocionar.BackColor = System.Drawing.SystemColors.Control;
+            this.Promocionar.Controls.Add(this.btnOfertas_Productos);
+            this.Promocionar.Location = new System.Drawing.Point(3, 872);
+            this.Promocionar.MaximumSize = new System.Drawing.Size(322, 169);
+            this.Promocionar.MinimumSize = new System.Drawing.Size(322, 56);
+            this.Promocionar.Name = "Promocionar";
+            this.Promocionar.Size = new System.Drawing.Size(322, 56);
+            this.Promocionar.TabIndex = 15;
+            this.Promocionar.Visible = false;
+            // 
+            // btnOfertas_Productos
+            // 
+            this.btnOfertas_Productos.BackColor = System.Drawing.Color.White;
+            this.btnOfertas_Productos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOfertas_Productos.FlatAppearance.BorderSize = 0;
+            this.btnOfertas_Productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOfertas_Productos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOfertas_Productos.ForeColor = System.Drawing.Color.Black;
+            this.btnOfertas_Productos.Image = ((System.Drawing.Image)(resources.GetObject("btnOfertas_Productos.Image")));
+            this.btnOfertas_Productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOfertas_Productos.Location = new System.Drawing.Point(0, 0);
+            this.btnOfertas_Productos.Name = "btnOfertas_Productos";
+            this.btnOfertas_Productos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnOfertas_Productos.Size = new System.Drawing.Size(322, 56);
+            this.btnOfertas_Productos.TabIndex = 3;
+            this.btnOfertas_Productos.Text = "          Promocionar";
+            this.btnOfertas_Productos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOfertas_Productos.UseVisualStyleBackColor = false;
+            this.btnOfertas_Productos.Click += new System.EventHandler(this.btnOfertas_Productos_Click);
+            // 
+            // DetalleCompra
+            // 
+            this.DetalleCompra.BackColor = System.Drawing.SystemColors.Control;
+            this.DetalleCompra.Controls.Add(this.btnDetalleCompra);
+            this.DetalleCompra.Location = new System.Drawing.Point(3, 934);
+            this.DetalleCompra.MaximumSize = new System.Drawing.Size(322, 169);
+            this.DetalleCompra.MinimumSize = new System.Drawing.Size(322, 56);
+            this.DetalleCompra.Name = "DetalleCompra";
+            this.DetalleCompra.Size = new System.Drawing.Size(322, 56);
+            this.DetalleCompra.TabIndex = 14;
+            this.DetalleCompra.Visible = false;
+            // 
+            // btnDetalleCompra
+            // 
+            this.btnDetalleCompra.BackColor = System.Drawing.Color.White;
+            this.btnDetalleCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDetalleCompra.FlatAppearance.BorderSize = 0;
+            this.btnDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalleCompra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalleCompra.ForeColor = System.Drawing.Color.Black;
+            this.btnDetalleCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalleCompra.Image")));
+            this.btnDetalleCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalleCompra.Location = new System.Drawing.Point(0, 0);
+            this.btnDetalleCompra.Name = "btnDetalleCompra";
+            this.btnDetalleCompra.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDetalleCompra.Size = new System.Drawing.Size(322, 56);
+            this.btnDetalleCompra.TabIndex = 3;
+            this.btnDetalleCompra.Text = "          DetalleCompra";
+            this.btnDetalleCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalleCompra.UseVisualStyleBackColor = false;
+            this.btnDetalleCompra.Click += new System.EventHandler(this.btnDetalleCompra_Click);
+            // 
             // panelSuperior
             // 
+            this.panelSuperior.Controls.Add(this.panel20);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(227, 0);
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(1159, 39);
             this.panelSuperior.TabIndex = 11;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.picMinimizar);
+            this.panel20.Controls.Add(this.picCerrar);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel20.Location = new System.Drawing.Point(1010, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(149, 39);
+            this.panel20.TabIndex = 6;
+            this.panel20.Paint += new System.Windows.Forms.PaintEventHandler(this.panel20_Paint);
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
+            this.picMinimizar.Location = new System.Drawing.Point(89, 12);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(24, 24);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMinimizar.TabIndex = 5;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(119, 6);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(24, 24);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picCerrar.TabIndex = 3;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // FrmInicioEmpleados
             // 
@@ -791,6 +1187,7 @@
             this.Text = "FrmInicioEmpleados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmInicioEmpleados_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInicioEmpleados_KeyDown);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartPedidoStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -808,15 +1205,30 @@
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.menulateral.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBoton)).EndInit();
-            this.panelHome.ResumeLayout(false);
-            this.panelUsuarios.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
+            this.Home.ResumeLayout(false);
+            this.Usuario.ResumeLayout(false);
+            this.Consulta.ResumeLayout(false);
+            this.Producto.ResumeLayout(false);
+            this.Categoria.ResumeLayout(false);
+            this.Proveedores.ResumeLayout(false);
+            this.RegistrarCompra.ResumeLayout(false);
+            this.RegistrarPedido.ResumeLayout(false);
+            this.Legales.ResumeLayout(false);
+            this.Promocion.ResumeLayout(false);
+            this.Bitacora.ResumeLayout(false);
+            this.DetallePedido.ResumeLayout(false);
+            this.Promocionar.ResumeLayout(false);
+            this.DetalleCompra.ResumeLayout(false);
+            this.panelSuperior.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -863,19 +1275,42 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Timer menulateralTimer;
         private System.Windows.Forms.FlowLayoutPanel menulateral;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox menuBoton;
-        private System.Windows.Forms.Panel panelHome;
+        private System.Windows.Forms.Panel Home;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panelUsuarios;
+        private System.Windows.Forms.Panel Usuario;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Consulta;
         private System.Windows.Forms.Button btnConsultas;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel Producto;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panelSuperior;
+        private System.Windows.Forms.Panel Categoria;
+        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Panel Proveedores;
+        private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Panel RegistrarCompra;
+        private System.Windows.Forms.Button btnCompras;
+        private System.Windows.Forms.Panel RegistrarPedido;
+        private System.Windows.Forms.Button btnPedidos;
+        private System.Windows.Forms.Panel Legales;
+        private System.Windows.Forms.Button btnLegales;
+        private System.Windows.Forms.Panel Promocion;
+        private System.Windows.Forms.Button btnPromociones;
+        private System.Windows.Forms.Panel Bitacora;
+        private System.Windows.Forms.Button btnBitacora;
+        private System.Windows.Forms.Panel DetallePedido;
+        private System.Windows.Forms.Button btnDetallePedido;
+        private System.Windows.Forms.Panel Promocionar;
+        private System.Windows.Forms.Button btnOfertas_Productos;
+        private System.Windows.Forms.Panel DetalleCompra;
+        private System.Windows.Forms.Button btnDetalleCompra;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.PictureBox picMinimizar;
+        private System.Windows.Forms.PictureBox picCerrar;
     }
 }

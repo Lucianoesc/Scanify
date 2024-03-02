@@ -30,12 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVistaDetalleProducto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtCategoria = new System.Windows.Forms.Label();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPedirStock = new System.Windows.Forms.Button();
@@ -64,14 +60,23 @@
             this.txtCodigoBarras = new System.Windows.Forms.TextBox();
             this.pictureBoxCamera = new System.Windows.Forms.PictureBox();
             this.scanDelayTimer = new System.Windows.Forms.Timer(this.components);
-            this.dtgvCompra = new System.Windows.Forms.DataGridView();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Oferta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btneliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtTotalPagar = new System.Windows.Forms.TextBox();
+            this.panelCarrito = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelCabeceraCarrito = new System.Windows.Forms.Panel();
+            this.txtTotalPagar = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelTotalCarrito = new System.Windows.Forms.Panel();
+            this.lblSubCategoria2 = new System.Windows.Forms.Label();
+            this.lblSiguienteSubCat2 = new System.Windows.Forms.Label();
+            this.lblSubCategoria = new System.Windows.Forms.Label();
+            this.lblSiguienteSubCat = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
@@ -82,47 +87,44 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCompra)).BeginInit();
+            this.panelCarrito.SuspendLayout();
+            this.panelCabeceraCarrito.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.txtCategoria);
+            this.panel1.Controls.Add(this.lblSubCategoria2);
+            this.panel1.Controls.Add(this.lblSiguienteSubCat2);
+            this.panel1.Controls.Add(this.lblSubCategoria);
+            this.panel1.Controls.Add(this.lblSiguienteSubCat);
+            this.panel1.Controls.Add(this.lblCategoria);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 49);
+            this.panel1.Size = new System.Drawing.Size(1347, 49);
             this.panel1.TabIndex = 0;
             this.panel1.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 49);
+            this.pictureBox3.Size = new System.Drawing.Size(107, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 29;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(72, 9);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(240, 36);
-            this.txtCategoria.TabIndex = 32;
-            this.txtCategoria.Text = "Categoria";
-            this.txtCategoria.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
-            // 
             // picFoto
             // 
-            this.picFoto.Location = new System.Drawing.Point(32, 81);
+            this.picFoto.Location = new System.Drawing.Point(2, 55);
             this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(531, 464);
+            this.picFoto.Size = new System.Drawing.Size(543, 470);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 1;
             this.picFoto.TabStop = false;
@@ -141,7 +143,7 @@
             this.panel2.Controls.Add(this.txtPrecio);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtNombre);
-            this.panel2.Location = new System.Drawing.Point(586, 81);
+            this.panel2.Location = new System.Drawing.Point(551, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(424, 420);
             this.panel2.TabIndex = 2;
@@ -277,7 +279,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.lblTextprecio);
             this.panel3.Controls.Add(this.lblOferta);
-            this.panel3.Location = new System.Drawing.Point(586, 524);
+            this.panel3.Location = new System.Drawing.Point(551, 498);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(424, 115);
             this.panel3.TabIndex = 3;
@@ -342,16 +344,16 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(49, 700);
+            this.txtDescripcion.Location = new System.Drawing.Point(9, 614);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(440, 291);
+            this.txtDescripcion.Size = new System.Drawing.Size(524, 296);
             this.txtDescripcion.TabIndex = 26;
             this.txtDescripcion.Text = "...";
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(48, 675);
+            this.label6.Location = new System.Drawing.Point(17, 587);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 27);
             this.label6.TabIndex = 27;
@@ -371,7 +373,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(294, 588);
+            this.panel4.Location = new System.Drawing.Point(264, 533);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(269, 53);
             this.panel4.TabIndex = 28;
@@ -383,7 +385,7 @@
             // 
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(43, 586);
+            this.panel5.Location = new System.Drawing.Point(13, 531);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(245, 53);
             this.panel5.TabIndex = 1;
@@ -392,7 +394,8 @@
             // 
             // txtCodigoBarras
             // 
-            this.txtCodigoBarras.Location = new System.Drawing.Point(586, 55);
+            this.txtCodigoBarras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoBarras.Location = new System.Drawing.Point(612, 691);
             this.txtCodigoBarras.Name = "txtCodigoBarras";
             this.txtCodigoBarras.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoBarras.TabIndex = 30;
@@ -401,8 +404,7 @@
             // 
             // pictureBoxCamera
             // 
-            this.pictureBoxCamera.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBoxCamera.Location = new System.Drawing.Point(530, 549);
+            this.pictureBoxCamera.Location = new System.Drawing.Point(727, 669);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
             this.pictureBoxCamera.Size = new System.Drawing.Size(33, 33);
             this.pictureBoxCamera.TabIndex = 31;
@@ -413,109 +415,192 @@
             // 
             this.scanDelayTimer.Tick += new System.EventHandler(this.scanDelayTimer_Tick);
             // 
-            // dtgvCompra
-            // 
-            this.dtgvCompra.AllowUserToAddRows = false;
-            this.dtgvCompra.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cantidad,
-            this.Producto,
-            this.PrecioCompra,
-            this.Oferta,
-            this.btneliminar});
-            this.dtgvCompra.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvCompra.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvCompra.Location = new System.Drawing.Point(586, 645);
-            this.dtgvCompra.MultiSelect = false;
-            this.dtgvCompra.Name = "dtgvCompra";
-            this.dtgvCompra.ReadOnly = true;
-            this.dtgvCompra.RowHeadersWidth = 38;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgvCompra.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvCompra.RowTemplate.Height = 28;
-            this.dtgvCompra.Size = new System.Drawing.Size(624, 369);
-            this.dtgvCompra.TabIndex = 41;
-            this.dtgvCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCompra_CellContentClick);
-            this.dtgvCompra.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dtgvCompra_CellPainting);
-            this.dtgvCompra.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 100;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 111;
-            // 
-            // Producto
-            // 
-            this.Producto.FillWeight = 98.90017F;
-            this.Producto.HeaderText = "Nombre de productos";
-            this.Producto.MinimumWidth = 222;
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 222;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Width = 70;
-            // 
-            // Oferta
-            // 
-            this.Oferta.HeaderText = "Ofertas incluidas";
-            this.Oferta.MinimumWidth = 180;
-            this.Oferta.Name = "Oferta";
-            this.Oferta.ReadOnly = true;
-            this.Oferta.Width = 180;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.HeaderText = "";
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.ReadOnly = true;
-            this.btneliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btneliminar.Visible = false;
-            this.btneliminar.Width = 50;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1028, 591);
+            this.label10.Location = new System.Drawing.Point(171, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 16);
             this.label10.TabIndex = 57;
             this.label10.Text = "Total a pagar:";
-            this.label10.Visible = false;
+            // 
+            // panelCarrito
+            // 
+            this.panelCarrito.AutoScroll = true;
+            this.panelCarrito.Controls.Add(this.panelCabeceraCarrito);
+            this.panelCarrito.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelCarrito.Location = new System.Drawing.Point(1044, 49);
+            this.panelCarrito.Name = "panelCarrito";
+            this.panelCarrito.Size = new System.Drawing.Size(303, 901);
+            this.panelCarrito.TabIndex = 60;
+            this.panelCarrito.Visible = false;
+            // 
+            // panelCabeceraCarrito
+            // 
+            this.panelCabeceraCarrito.Controls.Add(this.txtTotalPagar);
+            this.panelCabeceraCarrito.Controls.Add(this.label10);
+            this.panelCabeceraCarrito.Controls.Add(this.label11);
+            this.panelCabeceraCarrito.Controls.Add(this.label8);
+            this.panelCabeceraCarrito.Controls.Add(this.pictureBox1);
+            this.panelCabeceraCarrito.Controls.Add(this.label7);
+            this.panelCabeceraCarrito.Controls.Add(this.label5);
+            this.panelCabeceraCarrito.Location = new System.Drawing.Point(3, 3);
+            this.panelCabeceraCarrito.Name = "panelCabeceraCarrito";
+            this.panelCabeceraCarrito.Size = new System.Drawing.Size(274, 85);
+            this.panelCabeceraCarrito.TabIndex = 61;
+            this.panelCabeceraCarrito.Visible = false;
             // 
             // txtTotalPagar
             // 
-            this.txtTotalPagar.Location = new System.Drawing.Point(1028, 611);
+            this.txtTotalPagar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTotalPagar.BackColor = System.Drawing.Color.White;
+            this.txtTotalPagar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPagar.Location = new System.Drawing.Point(173, 46);
             this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalPagar.TabIndex = 58;
-            this.txtTotalPagar.Text = "0";
-            this.txtTotalPagar.Visible = false;
+            this.txtTotalPagar.Size = new System.Drawing.Size(99, 17);
+            this.txtTotalPagar.TabIndex = 59;
+            this.txtTotalPagar.Text = "Items";
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label11.Location = new System.Drawing.Point(0, 72);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(274, 13);
+            this.label11.TabIndex = 42;
+            this.label11.Text = "____________________________________________";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(6, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 25);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Items";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(253, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(314, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 25);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Carrito";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(78, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 25);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "cantidad";
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 1016);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1347, 10);
+            this.panel7.TabIndex = 61;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pictureBox3);
+            this.panel8.Controls.Add(this.panelTotalCarrito);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 950);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1347, 66);
+            this.panel8.TabIndex = 62;
+            // 
+            // panelTotalCarrito
+            // 
+            this.panelTotalCarrito.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelTotalCarrito.Location = new System.Drawing.Point(1044, 0);
+            this.panelTotalCarrito.Name = "panelTotalCarrito";
+            this.panelTotalCarrito.Size = new System.Drawing.Size(303, 66);
+            this.panelTotalCarrito.TabIndex = 0;
+            this.panelTotalCarrito.Visible = false;
+            // 
+            // lblSubCategoria2
+            // 
+            this.lblSubCategoria2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSubCategoria2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria2.Location = new System.Drawing.Point(458, 0);
+            this.lblSubCategoria2.Name = "lblSubCategoria2";
+            this.lblSubCategoria2.Size = new System.Drawing.Size(182, 49);
+            this.lblSubCategoria2.TabIndex = 44;
+            this.lblSubCategoria2.Text = "SubCategoria2";
+            this.lblSubCategoria2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubCategoria2.Visible = false;
+            // 
+            // lblSiguienteSubCat2
+            // 
+            this.lblSiguienteSubCat2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSiguienteSubCat2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiguienteSubCat2.Location = new System.Drawing.Point(414, 0);
+            this.lblSiguienteSubCat2.Name = "lblSiguienteSubCat2";
+            this.lblSiguienteSubCat2.Size = new System.Drawing.Size(44, 49);
+            this.lblSiguienteSubCat2.TabIndex = 46;
+            this.lblSiguienteSubCat2.Text = ">";
+            this.lblSiguienteSubCat2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSiguienteSubCat2.Visible = false;
+            // 
+            // lblSubCategoria
+            // 
+            this.lblSubCategoria.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSubCategoria.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria.Location = new System.Drawing.Point(232, 0);
+            this.lblSubCategoria.Name = "lblSubCategoria";
+            this.lblSubCategoria.Size = new System.Drawing.Size(182, 49);
+            this.lblSubCategoria.TabIndex = 43;
+            this.lblSubCategoria.Text = "SubCategoria";
+            this.lblSubCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSubCategoria.Visible = false;
+            // 
+            // lblSiguienteSubCat
+            // 
+            this.lblSiguienteSubCat.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSiguienteSubCat.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiguienteSubCat.Location = new System.Drawing.Point(188, 0);
+            this.lblSiguienteSubCat.Name = "lblSiguienteSubCat";
+            this.lblSiguienteSubCat.Size = new System.Drawing.Size(44, 49);
+            this.lblSiguienteSubCat.TabIndex = 45;
+            this.lblSiguienteSubCat.Text = ">";
+            this.lblSiguienteSubCat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSiguienteSubCat.Visible = false;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(0, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(188, 49);
+            this.lblCategoria.TabIndex = 42;
+            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCategoria.Visible = false;
             // 
             // FrmVistaDetalleProducto
             // 
@@ -523,10 +608,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1386, 1026);
-            this.Controls.Add(this.txtTotalPagar);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.dtgvCompra);
+            this.ClientSize = new System.Drawing.Size(1347, 1026);
+            this.Controls.Add(this.panelCarrito);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.pictureBoxCamera);
             this.Controls.Add(this.txtCodigoBarras);
             this.Controls.Add(this.panel5);
@@ -556,7 +641,11 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCompra)).EndInit();
+            this.panelCarrito.ResumeLayout(false);
+            this.panelCabeceraCarrito.ResumeLayout(false);
+            this.panelCabeceraCarrito.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,7 +667,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label txtDescripcion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label txtCategoria;
         private System.Windows.Forms.Label lblcantidad;
         private System.Windows.Forms.PictureBox btnsuma;
         private System.Windows.Forms.PictureBox btnresta;
@@ -593,15 +681,24 @@
         private System.Windows.Forms.Label lblOferta;
         private System.Windows.Forms.Label lblpreciodescuento;
         private System.Windows.Forms.Label lblTextprecio;
-        private System.Windows.Forms.DataGridView dtgvCompra;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Oferta;
-        private System.Windows.Forms.DataGridViewButtonColumn btneliminar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtTotalPagar;
         private System.Windows.Forms.Button btnPedirStock;
+        private System.Windows.Forms.FlowLayoutPanel panelCarrito;
+        private System.Windows.Forms.Panel panelCabeceraCarrito;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelTotalCarrito;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label txtTotalPagar;
+        private System.Windows.Forms.Label lblSubCategoria2;
+        private System.Windows.Forms.Label lblSiguienteSubCat2;
+        private System.Windows.Forms.Label lblSubCategoria;
+        private System.Windows.Forms.Label lblSiguienteSubCat;
+        private System.Windows.Forms.Label lblCategoria;
     }
 }

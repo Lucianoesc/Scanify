@@ -165,19 +165,15 @@
   <metadata name="scanDelayTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>282, 17</value>
   </metadata>
-  <metadata name="Cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Producto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PrecioCompra.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Oferta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btneliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD9SURBVEhLtZZr
+        DsIwDIN7L2Bi4/6HGEcA8Ru+sEaUPZqkMEtGVRLb3UslKZ4pdXCE51wKQ7TZo8ulCRSO8Aaf8AGH3HID
+        zQneC49eG6W5MhTCbGleevTSvBbF5YABmcmzax7jVrpShJfstQA9SzvdBRbhEGo+cwUFdwjrmLmChhkC
+        28wVDNQemtRrPfOleIPB2i7XaO98DgTekLi5AqEV0m4uQOwJ2PxOqkAYuUWxEAQtD9kXwuB+rykDtZ2L
+        wQDNmWz3DRpuIetYCIXwrqj5NCzaLhnQs7X8yBm6NfCXA+cAfz0y5didX8lngyzKkJC5Ak0Zsrx6Cjv8
+        bUnpBUTpaKGv76AMAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

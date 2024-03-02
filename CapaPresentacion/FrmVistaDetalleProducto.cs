@@ -15,30 +15,29 @@ using System.Windows.Forms;
 using ZXing;
 using CapaPresentacion.Properties;
 using CapaPresentacion.Modales;
+using Irony.Parsing;
 
 namespace CapaPresentacion
 {
     public partial class FrmVistaDetalleProducto : Form
     {
         private CN_Producto objcn_Producto = new CN_Producto();
+        private static List<FrmBusquedaCategoria> instanciasBusquedaCategoria = new List<FrmBusquedaCategoria>();
 
         public Form PreviousForm { get; set; }
-
+        private HashSet<int> productosAgregados = new HashSet<int>();
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
         private BarcodeReader reader;
         private bool isCameraStarted;
         private bool canScanBarcode = true;
 
-
         public FrmVistaDetalleProducto(Producto objProducto)
         {
             InitializeComponent();
-            CargarDatosDesdeCompraTemp();
-
-            dtgvCompra.Visible = CompraTemp.DtgvComprasVisible;
 
             reader = new BarcodeReader();
+
             productoActual = objProducto;
             incrementTimer.Interval = timerInterval;
             incrementTimer.Tick += new EventHandler(incrementimer_Tick);
@@ -46,9 +45,9 @@ namespace CapaPresentacion
             isCameraStarted = false;
 
             scanDelayTimer = new Timer();
-            scanDelayTimer.Interval = 3000; // 10 segundos
+            scanDelayTimer.Interval = 3000; 
             scanDelayTimer.Tick += new EventHandler(scanDelayTimer_Tick);
-            scanDelayTimer.Start(); // Asegúrate de habilitar el temporizador
+            scanDelayTimer.Start(); 
 
             // Habilita la capacidad de escanear cuando se inicia la aplicación.
             canScanBarcode = false;
@@ -64,7 +63,6 @@ namespace CapaPresentacion
         private Timer decrementTimer = new Timer();
         private int decrementAmount = 0;
 
-
         private static Producto productoActual;
 
 
@@ -74,6 +72,7 @@ namespace CapaPresentacion
             {
                 videoSource.Start();
                 isCameraStarted = true;
+
             }
         }
         private void InicializarCamara()
@@ -120,11 +119,10 @@ namespace CapaPresentacion
         }
         private void FrmVistaDetalleProducto_Load(object sender, EventArgs e)
         {
-
-
             MostrarOfertaYCalcularPrecioConDescuento();
             InicializarCamara();
             label3.Click += new EventHandler(label3_Click);
+
             bool obtenido = true;
             byte[] bytesImagen = new CN_Producto().ObtenerFoto(productoActual.IdProducto, out obtenido);
 
@@ -134,14 +132,20 @@ namespace CapaPresentacion
                 picFoto.Image = imagen;
             }
 
-
-
-
-
+            
             txtNombre.Text = productoActual.Nombre;
             txtPrecio.Text = productoActual.PrecioCompra.ToString();
             txtDescripcion.Text = productoActual.Descripcion;
-            txtCategoria.Text = productoActual.oCategoria.Descripcion;
+            lblCategoria.Text = productoActual.oCategoria.Descripcion;
+            lblSiguienteSubCat.Text = productoActual.oSubCategoria.Descripcion;
+            lblSiguienteSubCat2.Text = productoActual.oSubCategoria2.Descripcion;
+            // Comprobar si los paneles deberían estar visibles según el estado guardado en CompraTemp
+            panelCarrito.Visible = CompraTemp.DtgvComprasVisible;
+            panelTotalCarrito.Visible = CompraTemp.DtgvComprasVisible;
+            panelCabeceraCarrito.Visible = CompraTemp.DtgvComprasVisible;
+            // Cargar los datos desde CompraTemp al iniciar el formulario
+            CargarProductosEnFlowLayout(); // Agrega esta línea para cargar los productos al cargar el formulario
+            CalcularTotalPagar();
 
         }
 
@@ -210,23 +214,6 @@ namespace CapaPresentacion
 
         }
 
-        private void CargarDatosDesdeCompraTemp()
-        {
-            foreach (string compraData in CompraTemp.DtgvComprasData)
-            {
-                string[] data = compraData.Split(',');
-
-                if (data.Length == 5)
-                {
-                    string cantidad = data[0];
-                    string producto = data[1];
-                    string precioCompra = data[2];
-                    string oferta = data[4];
-                    dtgvCompra.Rows.Add(cantidad, producto, precioCompra, oferta);
-                }
-            }
-        }
-
         private void btnresta_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(lblcantidad.Text) != 0)
@@ -264,7 +251,27 @@ namespace CapaPresentacion
             incrementTimer.Start();
             incrementAmount = 1;
         }
+        private void CargarProductosEnFlowLayout()
+        {
 
+
+            foreach (string compraData in CompraTemp.DtgvComprasData)
+            {
+                string[] data = compraData.Split(';');
+
+                if (data.Length == 5)
+                {
+                    string idproducto = data[0];
+                    string producto = data[1];
+                    string cantidad = data[2];
+                    string precioCompra = data[3];
+                    string oferta = data[4];
+                    AgregarProductoAlPanelCarrito(idproducto, producto, cantidad,  precioCompra, oferta);
+                }
+                
+
+            }
+        }
         private void btnsuma_MouseUp(object sender, MouseEventArgs e)
         {
             incrementTimer.Stop();
@@ -343,20 +350,27 @@ namespace CapaPresentacion
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            // Verificar si ya hay una instancia abierta
+            FrmBusquedaCategoria instanciaExistente = instanciasBusquedaCategoria.Find(form => !form.IsDisposed);
 
+            if (instanciaExistente != null)
+            {
+                instanciaExistente.Focus();
+            }
+            else
+            {
+                // Crear una nueva instancia y agregarla a la lista
+                FrmBusquedaCategoria nuevaInstancia = new FrmBusquedaCategoria();
+                instanciasBusquedaCategoria.Add(nuevaInstancia);
+                nuevaInstancia.Show();
+            }
 
             scanDelayTimer.Stop();
             IniciarCamara();
             // Habilita la capacidad de escanear después de que se completa el temporizador de retraso.
             canScanBarcode = true;
-            if (videoSource != null && videoSource.IsRunning)
-            {
-                videoSource.SignalToStop();
-                isCameraStarted = false;
-            }
-            this.Close(); // Oculta el formulario de búsqueda
-
-            PreviousForm.Show(); // Muestra el formulario anterior
+            
+            this.Dispose(); // Oculta el formulario de búsqueda
         }
 
         private void FrmVistaDetalleProducto_FormClosing(object sender, FormClosingEventArgs e)
@@ -364,33 +378,27 @@ namespace CapaPresentacion
 
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                // Guarda el estado de visibilidad en la clase CompraTemp
-                CompraTemp.DtgvComprasVisible = dtgvCompra.Visible;
+                CompraTemp.DtgvComprasData.Clear();
 
-                // Si la lista actual de datos de compra aún no existe, créala
-                if (CompraTemp.DtgvComprasData == null)
+                // Recorre los controles en el FlowLayoutPanel y guarda los datos de compra
+                foreach (Control control in panelCarrito.Controls)
                 {
-                    CompraTemp.DtgvComprasData = new List<string>();
-                }
-
-                // Luego, verifica si los datos ya existen en la lista antes de agregarlos
-                foreach (DataGridViewRow row in dtgvCompra.Rows)
-                {
-                    string cantidad = row.Cells[0].Value?.ToString() ?? "";
-                    string producto = row.Cells[1].Value?.ToString() ?? "";
-                    string precioCompra = row.Cells[2].Value?.ToString() ?? "";
-                    string oferta = row.Cells[3].Value?.ToString() ?? "";
-
-                    // Construye una cadena con los datos separados por comas
-                    string compraData = $"{cantidad},{producto},{precioCompra},{oferta}";
-
-                    // Verifica si la compraData ya existe en la lista antes de agregarla
-                    if (!CompraTemp.DtgvComprasData.Contains(compraData))
+                    if (control is CarritoControl productoControl)
                     {
-                        CompraTemp.DtgvComprasData.Add(compraData);
+                        string idproducto = productoControl.Id;
+                        string producto = productoControl.Titulo;
+                        string cantidad = productoControl.Cantidad;
+                        string precioCompra = productoControl.PrecioCompra;
+                        string oferta = productoControl.Oferta;
+
+                        // Guarda el producto en CompraTemp
+                        GuardarProductoEnCompraTemp(idproducto, producto, cantidad, precioCompra, oferta);
                     }
                 }
+
             }
+            this.Dispose();
+
         }
 
         private void txtCodigoBarras_TextChanged(object sender, EventArgs e)
@@ -462,25 +470,79 @@ namespace CapaPresentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            panelCarrito.Visible = true;
+            panelTotalCarrito.Visible = true;
+            panelCabeceraCarrito.Visible = true;
 
-            CompraTemp.DtgvComprasVisible = true;
-            dtgvCompra.Visible = true;
-            string precioCompra = txtPrecio.Text; // Obtener el precio de compra del control correspondiente
+            // Obtener los datos del producto actual
+            string idproducto = productoActual.IdProducto.ToString();
 
-            string cantidad = lblcantidad.Text; // Obtener la cantidad del control correspondiente
-            if (lblpreciodescuento.Text != "")
+            // Verificar si el producto ya ha sido agregado al carrito
+            if (productosAgregados.Contains(productoActual.IdProducto))
             {
-                precioCompra = lblpreciodescuento.Text;
+                return; // Salir del método si el producto ya está en el carrito
             }
-            string producto = txtNombre.Text; // Obtener el nombre del producto del control correspondiente
+
+            // Agregar el ID del producto al HashSet
+            productosAgregados.Add(productoActual.IdProducto);
+
+            string producto = txtNombre.Text;
+            string cantidad = lblcantidad.Text;
+            string precioCompra = txtPrecio.Text;
             string oferta = lblOferta.Text;
 
-            dtgvCompra.Rows.Add(cantidad, producto, precioCompra, oferta);
-            string compraData = $"{cantidad},{producto},{precioCompra},{oferta}";
-            CompraTemp.DtgvComprasData.Add(compraData);
+            // Agregar los datos del producto al PanelCarrito
+            AgregarProductoAlPanelCarrito(idproducto, producto, cantidad, precioCompra, oferta);
+
+            // Guardar los datos del producto en CompraTemp
+            GuardarProductoEnCompraTemp(idproducto, producto, cantidad, precioCompra, oferta);
+
+            // Actualizar la visibilidad en CompraTemp
+            CompraTemp.DtgvComprasVisible = true;
+            CalcularTotalPagar();
 
         }
+        private void PicBorrar_Click(object sender, EventArgs e)
+        {
+            // Identifica el control CarritoControl asociado al evento
+            CarritoControl productoControl = (CarritoControl)sender;
 
+            // Remueve el control CarritoControl del panelCarrito
+            panelCarrito.Controls.Remove(productoControl);
+        }
+        private void AgregarProductoAlPanelCarrito(string idproducto, string producto, string cantidad, string precioCompra, string oferta)
+        {
+            CarritoControl productoControl = new CarritoControl();
+            productoControl.Id = productoActual.IdProducto.ToString();
+            productoControl.Titulo = producto;
+            productoControl.Cantidad = cantidad;
+
+            productoControl.PrecioCompra = precioCompra;
+            productoControl.Oferta = oferta; // Asegúrate de agregar el dato de oferta
+            bool obtenido = true;
+            byte[] bytesImagen = new CN_Producto().ObtenerFoto(Convert.ToInt32(idproducto), out obtenido);
+
+            if (obtenido)
+            {
+                Image imagen = ByteAimagen(bytesImagen);
+                productoControl.Foto = imagen;
+            }
+
+            productoControl.OnBorrarClicked += PicBorrar_Click;
+
+            panelCarrito.Controls.Add(productoControl);
+        }
+        private void GuardarProductoEnCompraTemp(string idproducto, string producto, string cantidad, string precioCompra, string oferta)
+        {
+            // Construye una cadena con los datos separados por comas
+            string compraData = $"{idproducto};{producto};{cantidad};{precioCompra};{oferta}";
+
+            // Verifica si la compraData ya existe en la lista antes de agregarla
+            if (!CompraTemp.DtgvComprasData.Contains(compraData))
+            {
+                CompraTemp.DtgvComprasData.Add(compraData);
+            }
+        }
         private void FrmVistaDetalleProducto_MouseEnter(object sender, EventArgs e)
         {
 
@@ -500,6 +562,52 @@ namespace CapaPresentacion
         {
             RegistrarEscaneoEnBaseDeDatos(productoActual.IdProducto);
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Ocultar el panel de carrito y otros elementos
+            panelTotalCarrito.Visible = false;
+            panelCarrito.Visible = false;
+            CompraTemp.DtgvComprasData.Clear();
+
+            // Eliminar todos los controles hijos del FlowLayoutPanel, excepto el panelCabeceraCarrito
+            foreach (Control control in panelCarrito.Controls.OfType<Control>().ToList())
+            {
+                if (control.Name != "panelCabeceraCarrito")
+                {
+                    panelCarrito.Controls.Remove(control);
+                    control.Dispose(); // Liberar recursos del control eliminado
+                }
+            }
+
+            // Volver a cargar los productos en el FlowLayoutPanel
+            CargarProductosEnFlowLayout();
+            CalcularTotalPagar();
+
+        }
+        private void CalcularTotalPagar()
+        {
+            decimal totalPagar = 0;
+
+            // Iterar sobre los datos de la compra temporal y sumar los precios de cada producto
+            foreach (string compraData in CompraTemp.DtgvComprasData)
+            {
+                string[] data = compraData.Split(';');
+
+                if (data.Length == 5)
+                {
+                    string precioCompra = data[3];
+                    // Convertir el precio de compra a decimal y sumarlo al total a pagar
+                    if (decimal.TryParse(precioCompra, out decimal precio))
+                    {
+                        totalPagar += precio;
+                    }
+                }
+            }
+
+            // Mostrar el total a pagar en el TextBox txtTotalPagar
+            txtTotalPagar.Text = totalPagar.ToString("C"); // Muestra el total con formato de moneda
         }
     }
 }

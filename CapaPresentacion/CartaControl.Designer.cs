@@ -45,6 +45,10 @@
             this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.lblInfoNutricional = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.lblSubCategoria = new System.Windows.Forms.Label();
+            this.lblSubCategoria2 = new System.Windows.Forms.Label();
+            this.lblStockMinimo = new System.Windows.Forms.Label();
+            this.txtStockLimite = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -92,6 +96,8 @@
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 4;
             this.picFoto.TabStop = false;
+            this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
+            this.picFoto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picFoto_MouseClick);
             // 
             // contextMenuStrip1
             // 
@@ -190,10 +196,50 @@
             this.lblEstado.TabIndex = 15;
             this.lblEstado.Visible = false;
             // 
+            // lblSubCategoria
+            // 
+            this.lblSubCategoria.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria.Location = new System.Drawing.Point(104, 64);
+            this.lblSubCategoria.Name = "lblSubCategoria";
+            this.lblSubCategoria.Size = new System.Drawing.Size(51, 23);
+            this.lblSubCategoria.TabIndex = 16;
+            this.lblSubCategoria.Visible = false;
+            // 
+            // lblSubCategoria2
+            // 
+            this.lblSubCategoria2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubCategoria2.Location = new System.Drawing.Point(112, 72);
+            this.lblSubCategoria2.Name = "lblSubCategoria2";
+            this.lblSubCategoria2.Size = new System.Drawing.Size(51, 23);
+            this.lblSubCategoria2.TabIndex = 17;
+            this.lblSubCategoria2.Visible = false;
+            // 
+            // lblStockMinimo
+            // 
+            this.lblStockMinimo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockMinimo.Location = new System.Drawing.Point(120, 80);
+            this.lblStockMinimo.Name = "lblStockMinimo";
+            this.lblStockMinimo.Size = new System.Drawing.Size(51, 23);
+            this.lblStockMinimo.TabIndex = 18;
+            this.lblStockMinimo.Visible = false;
+            // 
+            // txtStockLimite
+            // 
+            this.txtStockLimite.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStockLimite.Location = new System.Drawing.Point(128, 88);
+            this.txtStockLimite.Name = "txtStockLimite";
+            this.txtStockLimite.Size = new System.Drawing.Size(51, 23);
+            this.txtStockLimite.TabIndex = 19;
+            this.txtStockLimite.Visible = false;
+            // 
             // CartaControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtStockLimite);
+            this.Controls.Add(this.lblStockMinimo);
+            this.Controls.Add(this.lblSubCategoria2);
+            this.Controls.Add(this.lblSubCategoria);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblInfoNutricional);
             this.Controls.Add(this.lblPrecioVenta);
@@ -232,5 +278,10 @@
         private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.Label lblInfoNutricional;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblSubCategoria;
+        private System.Windows.Forms.Label lblSubCategoria2;
+        private System.Windows.Forms.Label lblStockMinimo;
+        private System.Windows.Forms.Label lblStockLimite;
+        private System.Windows.Forms.Label txtStockLimite;
     }
 }

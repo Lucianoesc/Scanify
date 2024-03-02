@@ -16,29 +16,32 @@ namespace CapaNegocio
         {
             return objcd_Producto.ListarProductos();
         }
+        public List<Producto> ListarProductosPorIdSubCategoria2(int idSubCategoria2)
+        {
+            return objcd_Producto.ListarProductosPorIdSubCategoria2(idSubCategoria2);
+        }
         public Producto ObtenerProductoConOferta(int idProducto)
         {
             return objcd_Producto.ObtenerProductoConOferta(idProducto);
         }
 
-
         public int Registrar(Producto obj, byte[] imagen, out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (obj.Nombre == "")
+            if (string.IsNullOrWhiteSpace(obj.Nombre))
             {
                 Mensaje += "Es necesario el nombre del producto\n";
             }
-            if (obj.Descripcion == "")
+            if (string.IsNullOrWhiteSpace(obj.Descripcion))
             {
-                Mensaje += "Es necesario el descripcion del producto\n";
+                Mensaje += "Es necesario la descripción del producto\n";
             }
-            if (obj.Codigo == "")
+            if (string.IsNullOrWhiteSpace(obj.Codigo))
             {
-                Mensaje += "Es necesario del codigo del producto\n";
+                Mensaje += "Es necesario el código del producto\n";
             }
 
-            if (Mensaje != string.Empty)
+            if (!string.IsNullOrWhiteSpace(Mensaje))
             {
                 return 0;
             }
@@ -46,27 +49,24 @@ namespace CapaNegocio
             {
                 return objcd_Producto.Registrar(obj, imagen, out Mensaje);
             }
-
-
-
         }
 
         public bool Editar(Producto obj, byte[] nuevaImagen, out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (obj.Codigo == "")
+            if (string.IsNullOrWhiteSpace(obj.Codigo))
             {
-                Mensaje += "Es necesario el codigo del Producto\n";
+                Mensaje += "Es necesario el código del Producto\n";
             }
-            if (obj.Nombre == "")
+            if (string.IsNullOrWhiteSpace(obj.Nombre))
             {
                 Mensaje += "Es necesario el nombre del Producto\n";
             }
-            if (obj.Descripcion == "")
+            if (string.IsNullOrWhiteSpace(obj.Descripcion))
             {
-                Mensaje += "Es necesario el descripcion del Producto\n";
+                Mensaje += "Es necesario la descripción del Producto\n";
             }
-            if (Mensaje != string.Empty)
+            if (!string.IsNullOrWhiteSpace(Mensaje))
             {
                 return false;
             }
@@ -75,7 +75,7 @@ namespace CapaNegocio
                 // Antes de editar, si hay una nueva imagen, actualiza la imagen en la base de datos
                 if (nuevaImagen != null)
                 {
-                    bool respuestaImagen = ActualizarFoto(obj.IdProducto, nuevaImagen, out Mensaje);
+                    bool respuestaImagen = objcd_Producto.ActualizarFoto(obj.IdProducto, nuevaImagen, out Mensaje);
 
                     if (!respuestaImagen)
                     {
@@ -96,15 +96,6 @@ namespace CapaNegocio
         public byte[] ObtenerFoto(int idProducto, out bool obtenido)
         {
             return objcd_Producto.ObtenerFoto(idProducto, out obtenido);
-        }
-
-        public bool ActualizarFoto(int idProducto, byte[] imagen, out string mensaje)
-        {
-            return objcd_Producto.ActualizarFoto(idProducto, imagen, out mensaje);
-        }
-        public List<Producto> ObtenerProductosPorIdOferta(int idOferta)
-        {
-            return objcd_Producto.ObtenerProductosPorIdOferta(idOferta);
         }
     }
 }

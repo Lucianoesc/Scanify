@@ -18,6 +18,7 @@ namespace CapaPresentacion
 {
     public partial class FrmProductos : Form
     {
+
         public FrmProductos()
         {
             InitializeComponent();
@@ -91,12 +92,17 @@ namespace CapaPresentacion
                 productoControl.Titulo = producto.Nombre;
                 productoControl.Descripcion = producto.Descripcion;
                 productoControl.Codigo = producto.Codigo;
-                productoControl.Categoria = producto.oCategoria.Descripcion;
+                productoControl.Categoria = producto.oCategoria.IdCategoria.ToString();
+                productoControl.SubCategoria = producto.oSubCategoria.IdSubCategoria.ToString();
+                productoControl.SubCategoria2 = producto.oSubCategoria2.IdSubCategoria2.ToString();
                 productoControl.Stock = producto.Stock.ToString();
                 productoControl.PrecioCompra = producto.PrecioCompra.ToString();
                 productoControl.PrecioVenta = producto.PrecioVenta.ToString();
                 productoControl.InfoNutricional = producto.InformacionNutricional;
                 productoControl.Estado = producto.Estado ? "Activo" : "Inactivo";
+                productoControl.StockMinimo = producto.StockMinimo.ToString();
+                productoControl.StockLimite= producto.StockLimite.ToString();
+
 
                 productoControl.Foto = ByteAimagen(producto.Foto); // Asegúrate de que Foto sea un arreglo de bytes
 

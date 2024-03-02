@@ -35,16 +35,21 @@
             this.pictureBoxCamera = new System.Windows.Forms.PictureBox();
             this.txtCodigoBarras = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(85, 71);
+            this.pictureBox3.Size = new System.Drawing.Size(105, 77);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -65,9 +70,9 @@
             // pictureBoxCamera
             // 
             this.pictureBoxCamera.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxCamera.Location = new System.Drawing.Point(311, 247);
+            this.pictureBoxCamera.Location = new System.Drawing.Point(990, 233);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(727, 539);
+            this.pictureBoxCamera.Size = new System.Drawing.Size(233, 170);
             this.pictureBoxCamera.TabIndex = 22;
             this.pictureBoxCamera.TabStop = false;
             this.pictureBoxCamera.MouseEnter += new System.EventHandler(this.pictureBoxCamera_MouseEnter);
@@ -85,16 +90,38 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 761);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1573, 77);
+            this.panel1.TabIndex = 25;
+            // 
+            // siticonePictureBox1
+            // 
+            this.siticonePictureBox1.BorderRadius = 15;
+            this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
+            this.siticonePictureBox1.ImageRotate = 0F;
+            this.siticonePictureBox1.Location = new System.Drawing.Point(448, 233);
+            this.siticonePictureBox1.Name = "siticonePictureBox1";
+            this.siticonePictureBox1.Size = new System.Drawing.Size(499, 425);
+            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.siticonePictureBox1.TabIndex = 26;
+            this.siticonePictureBox1.TabStop = false;
+            // 
             // FrmScanear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1573, 838);
+            this.Controls.Add(this.siticonePictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCodigoBarras);
             this.Controls.Add(this.pictureBoxCamera);
             this.Controls.Add(this.lblScanear);
-            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmScanear";
             this.Text = "FrmScanear";
@@ -104,6 +131,8 @@
             this.Load += new System.EventHandler(this.FrmScanear_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +144,7 @@
         private System.Windows.Forms.PictureBox pictureBoxCamera;
         private System.Windows.Forms.TextBox txtCodigoBarras;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
     }
 }

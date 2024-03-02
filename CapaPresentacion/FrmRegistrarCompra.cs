@@ -260,5 +260,43 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void panel13_Click(object sender, EventArgs e)
+        {
+            panelOpciones.Visible = false;
+            panelRegistrarCompra.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // Crea una instancia del formulario FrmInicioEmpleados
+            FrmInicioEmpleados frm = Application.OpenForms.OfType<FrmInicioEmpleados>().FirstOrDefault() ?? new FrmInicioEmpleados(_Usuario);
+
+            // Encuentra el panel llamado "DetallePedido" en el formulario FrmInicioEmpleados
+            Panel panelDetalleCompra = frm.Controls.Find("DetalleCompra", true).FirstOrDefault() as Panel;
+
+            if (panelDetalleCompra != null)
+            {
+
+
+                panelDetalleCompra.Visible = true;
+                Button btn = frm.Controls.Find("btnDetalleCompra", true).FirstOrDefault() as Button;
+
+                if (btn != null)
+                {
+                    System.Drawing.Color colorOriginal = btn.ForeColor;
+                    Image imageOriginal = btn.Image;
+                    btn.ForeColor = System.Drawing.Color.White;
+                    btn.Image = null;
+                    btn.PerformClick();
+                    panelDetalleCompra.Visible = false;
+                    btn.ForeColor = colorOriginal;
+                    btn.Image = imageOriginal;
+                }
+
+
+
+            }
+        }
     }
 }

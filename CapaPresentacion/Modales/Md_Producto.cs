@@ -1,6 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Utilidades;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Md_Producto : Form
+    public partial class Md_Producto : MaterialForm
     {
         public Producto _Producto { get; set; }
         public Md_Producto()

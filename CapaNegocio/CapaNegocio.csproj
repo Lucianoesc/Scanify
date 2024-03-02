@@ -45,7 +45,7 @@
     <Compile Include="CN_Categoria.cs" />
     <Compile Include="CN_Compra.cs" />
     <Compile Include="CN_Consulta.cs" />
-    <Compile Include="CN_Legales.cs" />
+    <Compile Include="CN_Negocio.cs" />
     <Compile Include="CN_Oferta.cs" />
     <Compile Include="CN_Pedido.cs" />
     <Compile Include="CN_PedidoStock.cs" />
@@ -54,6 +54,8 @@
     <Compile Include="CN_Proveedor.cs" />
     <Compile Include="CN_ReporteConsultas.cs" />
     <Compile Include="CN_Rol.cs" />
+    <Compile Include="CN_SubCategoria.cs" />
+    <Compile Include="CN_SubCategoria2.cs" />
     <Compile Include="CN_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecuperarContraseña.cs" />

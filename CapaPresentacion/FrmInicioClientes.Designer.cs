@@ -45,6 +45,7 @@
             this.btnEspañol = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.IdiomaTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnSeguridad = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOfertas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -54,13 +55,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelIdiomas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeguridad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBuscarPorCat
             // 
             this.lblBuscarPorCat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblBuscarPorCat.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarPorCat.Location = new System.Drawing.Point(274, 462);
+            this.lblBuscarPorCat.Location = new System.Drawing.Point(252, 527);
             this.lblBuscarPorCat.Name = "lblBuscarPorCat";
             this.lblBuscarPorCat.Size = new System.Drawing.Size(306, 76);
             this.lblBuscarPorCat.TabIndex = 0;
@@ -72,7 +74,7 @@
             // 
             this.lblScanear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblScanear.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScanear.Location = new System.Drawing.Point(807, 463);
+            this.lblScanear.Location = new System.Drawing.Point(785, 528);
             this.lblScanear.Name = "lblScanear";
             this.lblScanear.Size = new System.Drawing.Size(208, 75);
             this.lblScanear.TabIndex = 2;
@@ -87,7 +89,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1208, 260);
+            this.panel3.Size = new System.Drawing.Size(1208, 345);
             this.panel3.TabIndex = 2;
             // 
             // picOfertas
@@ -95,7 +97,7 @@
             this.picOfertas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picOfertas.Location = new System.Drawing.Point(0, 0);
             this.picOfertas.Name = "picOfertas";
-            this.picOfertas.Size = new System.Drawing.Size(1208, 260);
+            this.picOfertas.Size = new System.Drawing.Size(1208, 345);
             this.picOfertas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picOfertas.TabIndex = 0;
             this.picOfertas.TabStop = false;
@@ -106,7 +108,7 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(652, 250);
+            this.pictureBox4.Location = new System.Drawing.Point(647, 351);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(90, 56);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -119,7 +121,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(546, 250);
+            this.pictureBox3.Location = new System.Drawing.Point(541, 351);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(90, 56);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -132,7 +134,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(813, 541);
+            this.pictureBox2.Location = new System.Drawing.Point(791, 606);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 206);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +147,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(321, 541);
+            this.pictureBox1.Location = new System.Drawing.Point(299, 606);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +161,7 @@
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(599, 250);
+            this.pictureBox5.Location = new System.Drawing.Point(594, 351);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(90, 56);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -169,7 +171,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(3, 266);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 399);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(72, 69);
             this.pictureBox6.TabIndex = 9;
@@ -184,7 +186,7 @@
             this.panelIdiomas.Controls.Add(this.btnIngles);
             this.panelIdiomas.Controls.Add(this.btnEspañol);
             this.panelIdiomas.Controls.Add(this.btnIdioma);
-            this.panelIdiomas.Location = new System.Drawing.Point(915, 266);
+            this.panelIdiomas.Location = new System.Drawing.Point(927, 351);
             this.panelIdiomas.MaximumSize = new System.Drawing.Size(281, 210);
             this.panelIdiomas.MinimumSize = new System.Drawing.Size(281, 81);
             this.panelIdiomas.Name = "panelIdiomas";
@@ -256,12 +258,25 @@
             this.IdiomaTimer.Interval = 10;
             this.IdiomaTimer.Tick += new System.EventHandler(this.IdiomaTimer_Tick);
             // 
+            // btnSeguridad
+            // 
+            this.btnSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguridad.Image")));
+            this.btnSeguridad.ImageRotate = 0F;
+            this.btnSeguridad.Location = new System.Drawing.Point(111, 399);
+            this.btnSeguridad.Name = "btnSeguridad";
+            this.btnSeguridad.Size = new System.Drawing.Size(64, 64);
+            this.btnSeguridad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSeguridad.TabIndex = 13;
+            this.btnSeguridad.TabStop = false;
+            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click_1);
+            // 
             // FrmInicioClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1208, 824);
+            this.Controls.Add(this.btnSeguridad);
             this.Controls.Add(this.panelIdiomas);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel3);
@@ -291,7 +306,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panelIdiomas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeguridad)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -311,5 +328,6 @@
         private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.Button btnIngles;
         private System.Windows.Forms.Timer IdiomaTimer;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox btnSeguridad;
     }
 }

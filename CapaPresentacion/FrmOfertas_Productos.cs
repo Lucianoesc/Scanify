@@ -17,6 +17,7 @@ namespace CapaPresentacion
     {
         private CN_Oferta _OfertaNegocio;
 
+
         public FrmOfertas_Productos()
         {
             _OfertaNegocio = new CN_Oferta();
@@ -29,22 +30,42 @@ namespace CapaPresentacion
             dgvData.ReadOnly = false;
             dgvData.Columns["chkBox"].ReadOnly = false;
 
+            // Cargar las ofertas solo si hay al menos una
             List<Oferta> listaOfertas = new CN_Oferta().Listar();
-
-            foreach (Oferta item in listaOfertas)
+            if (listaOfertas.Count > 0)
             {
-                cmbOfertas.Items.Add(new OpcionCombo() { Valor = item.IdOferta, Texto = item.NombreOferta });
-
+                foreach (Oferta item in listaOfertas)
+                {
+                    cmbOfertas.Items.Add(new OpcionCombo() { Valor = item.IdOferta, Texto = item.NombreOferta });
+                }
+                cmbOfertas.DisplayMember = "Texto";
+                cmbOfertas.ValueMember = "Value";
+                cmbOfertas.SelectedIndex = 0;
             }
-            cmbOfertas.DisplayMember = "Texto";
-            cmbOfertas.ValueMember = "Value";
-            cmbOfertas.SelectedIndex = 0;
+            else
+            {
+                // Si no hay ofertas, muestra un mensaje informativo y deshabilita los controles relacionados
+                MessageBox.Show("No hay ofertas disponibles en la base de datos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnGuardar.Enabled = false; // Deshabilitar el botón para asociar productos
+                btnDesasociar.Enabled = false; // Deshabilitar el botón para desasociar productos
+            }
+
+            foreach (DataGridViewColumn column in dgvData.Columns)
+            {
+                if (column.Visible == true && column.Name != "btnSeleccionar" && column.Name != "chkBox")
+                {
+                    cmbBusqueda.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
+                }
+            }
+            cmbBusqueda.DisplayMember = "Texto";
+            cmbBusqueda.ValueMember = "Value";
+            cmbBusqueda.SelectedIndex = 0;
 
             List<Producto> lista = new CN_Oferta().ListarProductos_Oferta();
 
             foreach (Producto item in lista)
             {
-                dgvData.Rows.Add(new object[] {false, item.IdProducto,item.Nombre,item.Codigo,item.oCategoria.IdCategoria,item.oCategoria.Descripcion,
+                dgvData.Rows.Add(new object[] { false, item.IdProducto, item.Nombre, item.Codigo, item.oCategoria.IdCategoria, item.oCategoria.Descripcion,
                 item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo"
                 });
@@ -181,6 +202,30 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Por favor, seleccione al menos un producto.");
 
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)cmbBusqueda.SelectedItem).Valor.ToString();
+            if (dgvData.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvData.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnLimpiarBuscador_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                row.Visible = true;
             }
         }
     }

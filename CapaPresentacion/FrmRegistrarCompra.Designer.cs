@@ -32,8 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelRegistrarCompra = new System.Windows.Forms.Panel();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,41 +73,51 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelOpciones = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelRegistrarCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panelOpciones.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelRegistrarCompra
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1199, 646);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.txtTotalPagar);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.btnRegistrar);
-            this.panel3.Controls.Add(this.dtgvData);
-            this.panel3.Controls.Add(this.groupBox3);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(24, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(953, 618);
-            this.panel3.TabIndex = 32;
+            this.panelRegistrarCompra.BackColor = System.Drawing.Color.White;
+            this.panelRegistrarCompra.Controls.Add(this.txtTotalPagar);
+            this.panelRegistrarCompra.Controls.Add(this.label10);
+            this.panelRegistrarCompra.Controls.Add(this.label9);
+            this.panelRegistrarCompra.Controls.Add(this.btnRegistrar);
+            this.panelRegistrarCompra.Controls.Add(this.dtgvData);
+            this.panelRegistrarCompra.Controls.Add(this.groupBox3);
+            this.panelRegistrarCompra.Controls.Add(this.groupBox2);
+            this.panelRegistrarCompra.Controls.Add(this.groupBox1);
+            this.panelRegistrarCompra.Controls.Add(this.label12);
+            this.panelRegistrarCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRegistrarCompra.Location = new System.Drawing.Point(0, 0);
+            this.panelRegistrarCompra.Name = "panelRegistrarCompra";
+            this.panelRegistrarCompra.Size = new System.Drawing.Size(1199, 646);
+            this.panelRegistrarCompra.TabIndex = 32;
+            this.panelRegistrarCompra.Visible = false;
             // 
             // txtTotalPagar
             // 
@@ -524,19 +533,154 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "Registrar compra";
             // 
+            // panelOpciones
+            // 
+            this.panelOpciones.BackColor = System.Drawing.Color.White;
+            this.panelOpciones.Controls.Add(this.panel15);
+            this.panelOpciones.Controls.Add(this.panel10);
+            this.panelOpciones.Controls.Add(this.label14);
+            this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOpciones.Location = new System.Drawing.Point(0, 0);
+            this.panelOpciones.Name = "panelOpciones";
+            this.panelOpciones.Size = new System.Drawing.Size(1199, 646);
+            this.panelOpciones.TabIndex = 33;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Controls.Add(this.panel17);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(814, 131);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(385, 515);
+            this.panel15.TabIndex = 7;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel16.Controls.Add(this.pictureBox2);
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(326, 209);
+            this.panel16.TabIndex = 3;
+            this.panel16.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(101, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(326, 38);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Buscar compra";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel17.Location = new System.Drawing.Point(326, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(59, 515);
+            this.panel17.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.panel13);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(0, 131);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(385, 515);
+            this.panel10.TabIndex = 6;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel13.Controls.Add(this.label15);
+            this.panel13.Controls.Add(this.pictureBox1);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(59, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(326, 209);
+            this.panel13.TabIndex = 2;
+            this.panel13.Click += new System.EventHandler(this.panel13_Click);
+            // 
+            // label15
+            // 
+            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(326, 44);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Registrar una compra";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Click += new System.EventHandler(this.panel13_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(93, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.panel13_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(59, 515);
+            this.panel14.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(1199, 131);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Seleccionar una opción";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmRegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1199, 646);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelOpciones);
+            this.Controls.Add(this.panelRegistrarCompra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistrarCompra";
             this.Text = "FrmRegistrarCompra";
             this.Load += new System.EventHandler(this.FrmRegistrarCompra_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelRegistrarCompra.ResumeLayout(false);
+            this.panelRegistrarCompra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -545,14 +689,21 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelOpciones.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelRegistrarCompra;
         private System.Windows.Forms.TextBox txtTotalPagar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -593,5 +744,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn btneliminar;
         private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.Panel panelOpciones;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel17;
     }
 }

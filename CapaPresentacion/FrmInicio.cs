@@ -116,7 +116,6 @@ namespace CapaPresentacion
             this.Hide();
             FrmLogin form = new FrmLogin();
             form.ShowDialog();
-            form.FormClosing += frm_closing;
         }
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
@@ -131,8 +130,13 @@ namespace CapaPresentacion
         private void picConsumidor_DoubleClick(object sender, EventArgs e)
         {
             this.Hide();
-            FrmPrincipal frm = new FrmPrincipal();
+            FrmPantallaPrincipalClientes frm = new FrmPantallaPrincipalClientes();
             frm.Show();
+        }
+
+        private void FrmInicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

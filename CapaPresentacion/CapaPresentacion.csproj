@@ -210,17 +210,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarritoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarritoControl.Designer.cs">
+      <DependentUpon>CarritoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CartaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CartaControl.Designer.cs">
       <DependentUpon>CartaControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoriaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CategoriaControl.Designer.cs">
+      <DependentUpon>CategoriaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CategoriasClientes.Designer.cs">
+      <DependentUpon>CategoriasClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBusquedaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBusquedaCategoria.Designer.cs">
       <DependentUpon>FrmBusquedaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDetalleCompra.cs">
       <SubType>Form</SubType>
@@ -252,17 +276,17 @@
     <Compile Include="FrmOfertas_Productos.Designer.cs">
       <DependentUpon>FrmOfertas_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPantallaPrincipalClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPantallaPrincipalClientes.Designer.cs">
+      <DependentUpon>FrmPantallaPrincipalClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPedido.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPedido.Designer.cs">
       <DependentUpon>FrmPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductos.cs">
       <SubType>Form</SubType>
@@ -324,6 +348,18 @@
     <Compile Include="Modales\FrmRecuperarContraseña.Designer.cs">
       <DependentUpon>FrmRecuperarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\Md_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\Md_Categoria.Designer.cs">
+      <DependentUpon>Md_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\Md_CodigoSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\Md_CodigoSeguro.Designer.cs">
+      <DependentUpon>Md_CodigoSeguro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\Md_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,12 +384,6 @@
     <Compile Include="FrmBitacora.Designer.cs">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategorias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCategorias.Designer.cs">
-      <DependentUpon>FrmCategorias.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +395,18 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\Md_SubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\Md_SubCategoria.Designer.cs">
+      <DependentUpon>Md_SubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\Md_SubCategoria2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\Md_SubCategoria2.Designer.cs">
+      <DependentUpon>Md_SubCategoria2.cs</DependentUpon>
     </Compile>
     <Compile Include="Modales\ModalControladorProductos.cs">
       <SubType>Form</SubType>
@@ -384,14 +426,14 @@
     <Compile Include="Modales\MyMessageBoxForm.Designer.cs">
       <DependentUpon>MyMessageBoxForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductosClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductosClientes.Designer.cs">
+      <DependentUpon>ProductosClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FrmTablero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTablero.Designer.cs">
-      <DependentUpon>FrmTablero.cs</DependentUpon>
-    </Compile>
     <Compile Include="Rec.en-US.Designer.cs">
       <DependentUpon>Rec.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -402,12 +444,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Rec.resx</DependentUpon>
     </Compile>
+    <Compile Include="SubCategoria2Clientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubCategoria2Clientes.Designer.cs">
+      <DependentUpon>SubCategoria2Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoria2Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubCategoria2Control.Designer.cs">
+      <DependentUpon>SubCategoria2Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoriaClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubCategoriaClientes.Designer.cs">
+      <DependentUpon>SubCategoriaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoriaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubCategoriaControl.Designer.cs">
+      <DependentUpon>SubCategoriaControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades\OpcionCombo.cs" />
+    <EmbeddedResource Include="CarritoControl.resx">
+      <DependentUpon>CarritoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CartaControl.resx">
       <DependentUpon>CartaControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategoriaControl.resx">
+      <DependentUpon>CategoriaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriasClientes.resx">
+      <DependentUpon>CategoriasClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaCategoria.resx">
       <DependentUpon>FrmBusquedaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetalleCompra.resx">
       <DependentUpon>FrmDetalleCompra.cs</DependentUpon>
@@ -427,11 +505,11 @@
     <EmbeddedResource Include="FrmOfertas.resx">
       <DependentUpon>FrmOfertas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPantallaPrincipalClientes.resx">
+      <DependentUpon>FrmPantallaPrincipalClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPedido.resx">
       <DependentUpon>FrmPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -460,6 +538,12 @@
     <EmbeddedResource Include="Modales\FrmRecuperarContraseña.resx">
       <DependentUpon>FrmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modales\Md_Categoria.resx">
+      <DependentUpon>Md_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\Md_CodigoSeguro.resx">
+      <DependentUpon>Md_CodigoSeguro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modales\Md_Producto.resx">
       <DependentUpon>Md_Producto.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,14 +556,17 @@
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategorias.resx">
-      <DependentUpon>FrmCategorias.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\Md_SubCategoria.resx">
+      <DependentUpon>Md_SubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\Md_SubCategoria2.resx">
+      <DependentUpon>Md_SubCategoria2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\ModalControladorProductos.resx">
       <DependentUpon>ModalControladorProductos.cs</DependentUpon>
@@ -490,13 +577,13 @@
     <EmbeddedResource Include="Modales\MyMessageBoxForm.resx">
       <DependentUpon>MyMessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductosClientes.resx">
+      <DependentUpon>ProductosClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTablero.resx">
-      <DependentUpon>FrmTablero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rec.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -506,6 +593,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Rec.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubCategoria2Clientes.resx">
+      <DependentUpon>SubCategoria2Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCategoria2Control.resx">
+      <DependentUpon>SubCategoria2Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCategoriaClientes.resx">
+      <DependentUpon>SubCategoriaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubCategoriaControl.resx">
+      <DependentUpon>SubCategoriaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -630,6 +732,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin-imagen %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Magick.NET-Q16-AnyCPU.13.3.0\build\netstandard20\Magick.NET-Q16-AnyCPU.targets" Condition="Exists('..\packages\Magick.NET-Q16-AnyCPU.13.3.0\build\netstandard20\Magick.NET-Q16-AnyCPU.targets')" />

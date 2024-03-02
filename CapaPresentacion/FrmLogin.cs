@@ -144,7 +144,7 @@ namespace CapaPresentacion
                 this.Alerta("Bienvenido!!", Form_Alertas.enmType.Exito);
 
 
-                FrmTablero dash = new FrmTablero(usuario);
+                FrmInicioEmpleados dash = new FrmInicioEmpleados(usuario);
                 CN_Bitacora cnBitacora = new CN_Bitacora();
                 cnBitacora.InsertarBitacora(usuario.Username, usuario.IdUsuario.ToString(), "Login", "Login exitoso", "FrmLogin");
                 dash.Show();

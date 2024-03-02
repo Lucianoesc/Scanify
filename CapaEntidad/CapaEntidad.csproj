@@ -51,7 +51,7 @@
     <Compile Include="DetallePedido.cs" />
     <Compile Include="IdiomaConfig.cs" />
     <Compile Include="InactivityTimerManager.cs" />
-    <Compile Include="Legales.cs" />
+    <Compile Include="Negocio.cs" />
     <Compile Include="Oferta.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="PedidoStock.cs" />
@@ -61,6 +61,8 @@
     <Compile Include="Proveedor.cs" />
     <Compile Include="ReporteConsultas.cs" />
     <Compile Include="Rol.cs" />
+    <Compile Include="SubCategoria.cs" />
+    <Compile Include="SubCategoria2.cs" />
     <Compile Include="TimerManager.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

@@ -42,23 +42,24 @@ namespace CapaPresentacion
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
             FrmScanear frm = new FrmScanear();
             frm.Show();
         }
 
         private void FrmInicioClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Cerrar todos los formularios y finalizar la aplicación
-            foreach (Form form in Application.OpenForms)
-            {
-                form.Close();
-            }
+
+            //// Cerrar todos los formularios y finalizar la aplicación
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    form.Close();
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
             FrmBusquedaCategoria frm = new FrmBusquedaCategoria();
             frm.Show();
         }
@@ -171,6 +172,7 @@ namespace CapaPresentacion
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            CompraTemp.ReiniciarCompraTemp(); // Reiniciar la compra temporal aquí
 
         }
 
@@ -239,6 +241,18 @@ namespace CapaPresentacion
             CambiarIdioma("es");
             IdiomaConfig.Idioma = "es"; // Actualizar el idioma seleccionado
 
+        }
+
+        private void btnSeguridad_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btnSeguridad_Click_1(object sender, EventArgs e)
+        {
+            Md_CodigoSeguro frm = new Md_CodigoSeguro();
+            frm.ShowDialog();
         }
     }
 }

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPDF = new System.Windows.Forms.Button();
             this.btnLimpiarBuscador = new System.Windows.Forms.Button();
@@ -60,46 +59,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(963, 631);
-            this.panel1.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.btnPDF);
-            this.panel3.Controls.Add(this.btnLimpiarBuscador);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.btnBuscar);
-            this.panel3.Controls.Add(this.txtBuscar);
-            this.panel3.Controls.Add(this.txtMontoTotal);
-            this.panel3.Controls.Add(this.dtgvData);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(54, 12);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(842, 611);
+            this.panel3.Size = new System.Drawing.Size(963, 631);
             this.panel3.TabIndex = 32;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnPDF
             // 
-            this.btnPDF.Location = new System.Drawing.Point(9, 367);
+            this.btnPDF.Location = new System.Drawing.Point(12, 368);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(98, 23);
             this.btnPDF.TabIndex = 64;
@@ -115,7 +102,7 @@
             this.btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarBuscador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarBuscador.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarBuscador.Image")));
-            this.btnLimpiarBuscador.Location = new System.Drawing.Point(662, 52);
+            this.btnLimpiarBuscador.Location = new System.Drawing.Point(745, 43);
             this.btnLimpiarBuscador.Name = "btnLimpiarBuscador";
             this.btnLimpiarBuscador.Size = new System.Drawing.Size(50, 44);
             this.btnLimpiarBuscador.TabIndex = 63;
@@ -130,7 +117,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(178, 65);
+            this.label6.Location = new System.Drawing.Point(145, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 19);
             this.label6.TabIndex = 59;
@@ -144,7 +131,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(618, 52);
+            this.btnBuscar.Location = new System.Drawing.Point(701, 43);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(50, 44);
             this.btnBuscar.TabIndex = 62;
@@ -158,14 +145,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(347, 62);
+            this.txtBuscar.Location = new System.Drawing.Point(314, 53);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(260, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(381, 27);
             this.txtBuscar.TabIndex = 60;
             // 
             // txtMontoTotal
             // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(722, 368);
+            this.txtMontoTotal.Location = new System.Drawing.Point(852, 373);
             this.txtMontoTotal.Name = "txtMontoTotal";
             this.txtMontoTotal.Size = new System.Drawing.Size(100, 20);
             this.txtMontoTotal.TabIndex = 56;
@@ -197,7 +184,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvData.Location = new System.Drawing.Point(3, 391);
+            this.dtgvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvData.Location = new System.Drawing.Point(0, 0);
             this.dtgvData.MultiSelect = false;
             this.dtgvData.Name = "dtgvData";
             this.dtgvData.ReadOnly = true;
@@ -206,7 +194,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgvData.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvData.RowTemplate.Height = 28;
-            this.dtgvData.Size = new System.Drawing.Size(833, 217);
+            this.dtgvData.Size = new System.Drawing.Size(963, 235);
             this.dtgvData.TabIndex = 40;
             // 
             // Producto
@@ -243,9 +231,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 238);
+            this.groupBox2.Location = new System.Drawing.Point(6, 238);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(827, 129);
+            this.groupBox2.Size = new System.Drawing.Size(954, 129);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion del proveedor";
@@ -294,7 +282,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(634, 370);
+            this.label10.Location = new System.Drawing.Point(764, 375);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 16);
             this.label10.TabIndex = 55;
@@ -309,9 +297,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 107);
+            this.groupBox1.Location = new System.Drawing.Point(6, 107);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(827, 129);
+            this.groupBox1.Size = new System.Drawing.Size(946, 129);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion compra";
@@ -366,41 +354,78 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(365, 10);
+            this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(281, 36);
+            this.label12.Size = new System.Drawing.Size(963, 36);
             this.label12.TabIndex = 32;
             this.label12.Text = "Detalle de compra";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dtgvData);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 396);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(963, 235);
+            this.panel1.TabIndex = 65;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtBuscar);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.btnLimpiarBuscador);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(963, 101);
+            this.panel2.TabIndex = 66;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.btnPDF);
+            this.panel4.Controls.Add(this.groupBox2);
+            this.panel4.Controls.Add(this.txtMontoTotal);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(963, 631);
+            this.panel4.TabIndex = 67;
             // 
             // FrmDetalleCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 631);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDetalleCompra";
             this.Text = "FrmBuscarCompra";
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvData)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.Label label10;
@@ -428,5 +453,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.TextBox txtnumerodocumento;
         private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
     }
 }
