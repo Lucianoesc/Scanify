@@ -1,0 +1,6 @@
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\bin\Release\CapaEntidad.dll
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\bin\Release\CapaEntidad.pdb
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\obj\Release\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\obj\Release\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\obj\Release\CapaEntidad.dll
+C:\Users\Luciano\OneDrive\Escritorio\Scanify\CapaEntidad\obj\Release\CapaEntidad.pdb
