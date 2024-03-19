@@ -15,6 +15,8 @@ namespace CapaPresentacion
 {
     public partial class FrmPantallaPrincipalClientes : Form
     {
+        private ActivityTimer activityTimer;
+
         private Timer videoTimer;
         private const int MarginOfError = 1;
 
@@ -47,6 +49,7 @@ namespace CapaPresentacion
             //    Console.WriteLine("Excepción de objeto COM no válido: " + ex.Message);
             //}
         }
+        
         private void FrmPantallaPrincipalClientes_Load(object sender, EventArgs e)
         {
             //string mp4FilePath = @"C:\Users\Luciano\OneDrive\Escritorio\videoreferencia.mp4";

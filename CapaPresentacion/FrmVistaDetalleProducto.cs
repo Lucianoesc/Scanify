@@ -34,7 +34,7 @@ namespace CapaPresentacion
         private bool isCameraStarted;
         private bool canScanBarcode = true;
 
-        public FrmVistaDetalleProducto(Producto objProducto)
+        public FrmVistaDetalleProducto(Producto objProducto = null)
         {
             InitializeComponent();
 
@@ -444,10 +444,6 @@ namespace CapaPresentacion
             decrementTimer.Interval = timerInterval;
         }
 
-        private void panel4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -592,11 +588,6 @@ namespace CapaPresentacion
                 txtPrecio.Font = new Font(txtPrecio.Font, FontStyle.Regular);
             }
         }
-
-        private void lblTextprecio_Click(object sender, EventArgs e)
-        {
-
-        }
         private void EliminarProductoDeCompraTemp(string idProducto)
         {
             // Iterar sobre los datos de la compra temporal y eliminar el producto correspondiente
@@ -625,10 +616,7 @@ namespace CapaPresentacion
                 }
             }
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-           
-        }
+
         private void PicBorrar_Click(object sender, EventArgs e)
         {
             // Identifica el control CarritoControl asociado al evento
@@ -676,25 +664,6 @@ namespace CapaPresentacion
             {
                 CompraTemp.DtgvComprasData.Add(compraData);
             }
-        }
-        private void FrmVistaDetalleProducto_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgvCompra_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
-        }
-
-        private void dtgvCompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnPedirStock_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -868,26 +837,6 @@ namespace CapaPresentacion
             lblcantidad.Text = "0";
         }
 
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void panelOfertas_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void panelCarrito_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panelCarrito_Click(object sender, EventArgs e)
         {
             activityTimer.Stop();
@@ -930,10 +879,7 @@ namespace CapaPresentacion
             activityTimer.Start();
         }
 
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void panel14_Click(object sender, EventArgs e)
         {

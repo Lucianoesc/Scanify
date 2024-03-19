@@ -56,6 +56,7 @@ namespace CapaPresentacion
             get { return lblCategoria.Text; }
             set { lblCategoria.Text = value; }
         }
+        
         public string SubCategoria
         {
             get { return lblSubCategoria.Text; }

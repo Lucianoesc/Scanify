@@ -155,9 +155,9 @@ namespace CapaPresentacion
 
             return imagen;
         }
+        
         private void FrmBusquedaCategoria_Load(object sender, EventArgs e)
         {
-
 
             CargarProductosEnFlowLayout();
             CargarCategoriasEnFlowLayout();

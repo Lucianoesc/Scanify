@@ -133,7 +133,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1347, 34);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // flowLayoutPanel2
             // 
@@ -224,7 +223,6 @@
             this.picFoto.TabIndex = 1;
             this.picFoto.TabStop = false;
             this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
-            this.picFoto.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // panel2
             // 
@@ -249,8 +247,6 @@
             this.panel2.Size = new System.Drawing.Size(389, 327);
             this.panel2.TabIndex = 2;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            this.panel2.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // label6
             // 
@@ -346,7 +342,6 @@
             this.btnsuma.TabStop = false;
             this.btnsuma.Click += new System.EventHandler(this.pictureBox2_Click);
             this.btnsuma.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsuma_MouseDown);
-            this.btnsuma.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             this.btnsuma.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsuma_MouseUp);
             // 
             // btnresta
@@ -359,7 +354,6 @@
             this.btnresta.TabStop = false;
             this.btnresta.Click += new System.EventHandler(this.btnresta_Click);
             this.btnresta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnresta_MouseDown);
-            this.btnresta.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             this.btnresta.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnresta_MouseUp);
             // 
             // txtCantidad
@@ -371,7 +365,6 @@
             this.txtCantidad.Size = new System.Drawing.Size(136, 30);
             this.txtCantidad.TabIndex = 31;
             this.txtCantidad.Text = "Cantidad:";
-            this.txtCantidad.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // txtPrecio
             // 
@@ -402,7 +395,6 @@
             this.txtNombre.Size = new System.Drawing.Size(110, 30);
             this.txtNombre.TabIndex = 28;
             this.txtNombre.Text = "Nombre";
-            this.txtNombre.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // lblOferta
             // 
@@ -427,8 +419,6 @@
             this.panelOfertas.TabIndex = 3;
             this.panelOfertas.Visible = false;
             this.panelOfertas.Click += new System.EventHandler(this.panelOfertas_Click);
-            this.panelOfertas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelOfertas_Paint);
-            this.panelOfertas.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // lblTextprecio
             // 
@@ -441,7 +431,6 @@
             this.lblTextprecio.TabIndex = 37;
             this.lblTextprecio.Text = "Oferta:";
             this.lblTextprecio.Visible = false;
-            this.lblTextprecio.Click += new System.EventHandler(this.lblTextprecio_Click);
             // 
             // lbldetalles
             // 
@@ -452,7 +441,6 @@
             this.lbldetalles.TabIndex = 22;
             this.lbldetalles.Text = "Detalles";
             this.lbldetalles.Click += new System.EventHandler(this.label3_Click);
-            this.lbldetalles.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // lblFichaTecnica
             // 
@@ -503,7 +491,6 @@
             this.lbldescripcion.Size = new System.Drawing.Size(165, 27);
             this.lbldescripcion.TabIndex = 27;
             this.lbldescripcion.Text = "Descripcion:";
-            this.lbldescripcion.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // incrementimer
             // 
@@ -522,9 +509,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(269, 53);
             this.panel4.TabIndex = 28;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            this.panel4.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // panel5
             // 
@@ -535,7 +520,6 @@
             this.panel5.Size = new System.Drawing.Size(245, 53);
             this.panel5.TabIndex = 1;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            this.panel5.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             // 
             // txtCodigoBarras
             // 
@@ -581,7 +565,6 @@
             this.panelCarrito.TabIndex = 60;
             this.panelCarrito.Visible = false;
             this.panelCarrito.Click += new System.EventHandler(this.panelCarrito_Click);
-            this.panelCarrito.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCarrito_Paint);
             // 
             // panelCabeceraCarrito
             // 
@@ -777,7 +760,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(389, 906);
             this.panel11.TabIndex = 65;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // panel12
             // 
@@ -819,7 +801,6 @@
             this.panel14.Size = new System.Drawing.Size(578, 310);
             this.panel14.TabIndex = 2;
             this.panel14.Click += new System.EventHandler(this.panel14_Click);
-            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // FrmVistaDetalleProducto
             // 
@@ -843,7 +824,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVistaDetalleProducto_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmVistaDetalleProducto_FormClosed);
             this.Load += new System.EventHandler(this.FrmVistaDetalleProducto_Load);
-            this.MouseEnter += new System.EventHandler(this.FrmVistaDetalleProducto_MouseEnter);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();

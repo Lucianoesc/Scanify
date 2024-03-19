@@ -30,12 +30,12 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
             this.txtBuscador = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnProducto = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.panelInferior = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelInferior = new System.Windows.Forms.Panel();
             this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,15 +60,26 @@
             this.panelSuperior.Size = new System.Drawing.Size(1159, 100);
             this.panelSuperior.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(368, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 19);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Agregar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(946, 53);
+            this.btnExcel.Location = new System.Drawing.Point(836, 53);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(98, 23);
             this.btnExcel.TabIndex = 60;
             this.btnExcel.Text = "Descargar Excel";
             this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Visible = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // txtBuscador
@@ -107,26 +118,6 @@
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.materialFloatingActionButton1_Click);
             // 
-            // panelInferior
-            // 
-            this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInferior.Location = new System.Drawing.Point(0, 933);
-            this.panelInferior.Name = "panelInferior";
-            this.panelInferior.Size = new System.Drawing.Size(1159, 108);
-            this.panelInferior.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(368, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Agregar";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -138,6 +129,14 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Productos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelInferior
+            // 
+            this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInferior.Location = new System.Drawing.Point(0, 933);
+            this.panelInferior.Name = "panelInferior";
+            this.panelInferior.Size = new System.Drawing.Size(1159, 108);
+            this.panelInferior.TabIndex = 2;
             // 
             // FrmProductos
             // 

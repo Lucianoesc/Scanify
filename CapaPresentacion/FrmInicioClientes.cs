@@ -96,10 +96,9 @@ namespace CapaPresentacion
             this.Close();
 
         }
-
+        
         private void FrmInicioClientes_Load(object sender, EventArgs e)
         {
-
 
 
 

@@ -190,7 +190,7 @@
             // lblEstado
             // 
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(42, 115);
+            this.lblEstado.Location = new System.Drawing.Point(46, 115);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(51, 23);
             this.lblEstado.TabIndex = 15;

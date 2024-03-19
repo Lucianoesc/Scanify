@@ -50,18 +50,11 @@ namespace CapaPresentacion
                 form.Close();
                 form.Dispose();
             }
-            PreCargarFrmPantallaPrincipalClientes();
 
 
 
         }
-        private void PreCargarFrmPantallaPrincipalClientes()
-        {
-            FrmPantallaPrincipalClientes frm = new FrmPantallaPrincipalClientes();
-            frm.Visible = false; // No queremos mostrarlo de inmediato
-            frm.ShowInTaskbar = false; // Evitamos que aparezca en la barra de tareas
-            frm.Show(); // Mostramos el formulario para que se inicialice
-        }
+       
         #region BtnConsumidor
         private void picConsumidor_MouseEnter(object sender, EventArgs e)
         {
